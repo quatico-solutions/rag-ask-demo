@@ -1,13 +1,25 @@
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { OpenAI } from 'openai';
-import { loadDocs, embedAllDocs, findRelevantDocs } from './support/semanticSearch';
+import {
+  loadDocs,
+  embedAllDocs,
+  findRelevantDocs,
+} from './support/semanticSearch';
+import { htmlBody, escapeHtml } from './view/html';
+import { stripFrontmatter } from './support/frontmatter';
 import { readFile } from 'fs/promises';
 import * as process from 'process';
 
 // Load prompt templates and documents from data files
-const systemPromptPromise = readFile(`${process.cwd()}/data/example-nodejs/system-prompt.md`, 'utf-8');
-const userTemplatePromise = readFile(`${process.cwd()}/data/example-nodejs/user-template.md`, 'utf-8');
+const systemPromptPromise = readFile(
+  `${process.cwd()}/data/example-nodejs/system-prompt.md`,
+  'utf-8'
+);
+const userTemplatePromise = readFile(
+  `${process.cwd()}/data/example-nodejs/user-template.md`,
+  'utf-8'
+);
 const docsPromise = loadDocs();
 // Mock OpenAI for testing
 class MockOpenAI {
@@ -30,19 +42,11 @@ class MockOpenAI {
 const app = new Hono();
 
 // Init OpenAI client (real or mock for tests)
-const openai = process.env.USE_MOCK_OPENAI === 'true'
-  ? new MockOpenAI()
-  : new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const openai =
+  process.env.USE_MOCK_OPENAI === 'true'
+    ? new MockOpenAI()
+    : new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 let docsEmbeddedPromise: Promise<void> | null = null;
-
-function htmlBody(inner: string): string {
-  return `<!doctype html>\n<html><head><meta charset='utf-8'><title>RAG Ask</title></head><body>${inner}</body></html>`;
-}
-// Strip YAML frontmatter from text
-function stripFrontmatter(text: string): string {
-  // Remove YAML frontmatter (supports both LF and CRLF line endings)
-  return text.replace(/^---\s*[\r\n]+[\s\S]*?[\r\n]+---\s*[\r\n]*/, '').trim();
-}
 
 // Render the form
 app.get('/', (c) => {
@@ -82,7 +86,9 @@ app.post('/ask', async (c) => {
   const system = stripFrontmatter(rawSystem);
   const rawTemplate = await userTemplatePromise;
   const template = stripFrontmatter(rawTemplate);
-  const user = template.replace('{{context}}', context).replace('{{question}}', question);
+  const user = template
+    .replace('{{context}}', context)
+    .replace('{{question}}', question);
 
   const completion = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',
@@ -104,10 +110,10 @@ app.post('/ask', async (c) => {
       ],
     },
     context,
-    relevantDocs: relevantDocs.map(d => ({ id: d.id, text: d.text })),
+    relevantDocs: relevantDocs.map((d) => ({ id: d.id, text: d.text })),
     completion,
   };
-  
+
   // Logging Utility
   function logToFile(message: string): void {
     const fs = require('fs');
@@ -139,25 +145,6 @@ app.post('/ask', async (c) => {
   `;
   return c.html(htmlBody(html));
 });
-
-function escapeHtml(str: string): string {
-  return str.replace(/[&<>"']/g, (s) => {
-    switch (s) {
-      case '&':
-        return '&amp;';
-      case '<':
-        return '&lt;';
-      case '>':
-        return '&gt;';
-      case '"':
-        return '&quot;';
-      case "'":
-        return '&#39;';
-      default:
-        return s;
-    }
-  });
-}
 
 // Start server only when run directly
 if (require.main === module) {

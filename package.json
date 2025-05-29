@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --ext ts,tsx --exec tsx src/server.ts",
-    "ci": "pnpm run type-check &&pnpm run test:e2e",
+    "ci": "pnpm run type-check && pnpm run test && pnpm run test:e2e",
     "start": "node --import tsx src/server.ts",
     "type-check": "tsc --noEmit",
     "test": "pnpm exec jest --no-cache",

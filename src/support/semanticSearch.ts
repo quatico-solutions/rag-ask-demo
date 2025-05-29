@@ -47,7 +47,7 @@ export async function findRelevantDocs(openai: any, documents: Doc[], query: str
   return scored.slice(0, n).map(s => s.doc);
 }
 
-function cosineSimilarity(a: number[], b: number[]): number {
+export function cosineSimilarity(a: number[], b: number[]): number {
   let dot = 0;
   let normA = 0;
   let normB = 0;
