@@ -107,6 +107,19 @@ app.post('/ask', async (c) => {
     relevantDocs: relevantDocs.map(d => ({ id: d.id, text: d.text })),
     completion,
   };
+  
+  // Logging Utility
+  function logToFile(message: string): void {
+    const fs = require('fs');
+    const timestamp = new Date().toISOString();
+    const sanitized = message.replace(/\n{2,}/g, '\n');
+    const formattedMessage = `${timestamp}\n${sanitized}\n`;
+    fs.appendFileSync('server.log', formattedMessage);
+  }
+
+  // Example usage of logToFile
+  logToFile('OpenAI completion: ' + JSON.stringify(completion, null, 2));
+
   const debugJson = JSON.stringify(debugData, null, 2);
 
   // Render page with question, answer, relevant docs, and debug UI
