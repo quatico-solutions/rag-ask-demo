@@ -16,8 +16,8 @@ and decision making.
    resources.
 5. **Update Regularly**: Whenever the project context changes or new decisions are
    made, update this file to keep the memory current.
-6. **Commit Suggestions**: After each user instruction, include a suggested `git commit`
-   command with a concise commit message to record the change.
+6. **Commit Suggestions**: After each user instruction, include a suggested `git add . && git commit --all -m 'message'`
+   command with a concise commit message to record the change. Always use this full command form when suggesting how to commit.
 
 ## Sections
 
