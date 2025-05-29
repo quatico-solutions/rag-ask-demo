@@ -38,6 +38,11 @@ let docsEmbeddedPromise: Promise<void> | null = null;
 function htmlBody(inner: string): string {
   return `<!doctype html>\n<html><head><meta charset='utf-8'><title>RAG Ask</title></head><body>${inner}</body></html>`;
 }
+// Strip YAML frontmatter from text
+function stripFrontmatter(text: string): string {
+  // Remove YAML frontmatter (supports both LF and CRLF line endings)
+  return text.replace(/^---\s*[\r\n]+[\s\S]*?[\r\n]+---\s*[\r\n]*/, '').trim();
+}
 
 // Render the form
 app.get('/', (c) => {
@@ -72,9 +77,11 @@ app.post('/ask', async (c) => {
   const relevantDocs = await findRelevantDocs(openai, docs, question, 2);
   const context = relevantDocs.map((d) => d.text).join('\n');
 
-  // Prepare prompts from external templates
-  const system = await systemPromptPromise;
-  const template = await userTemplatePromise;
+  // Prepare prompts from external templates and strip YAML headers
+  const rawSystem = await systemPromptPromise;
+  const system = stripFrontmatter(rawSystem);
+  const rawTemplate = await userTemplatePromise;
+  const template = stripFrontmatter(rawTemplate);
   const user = template.replace('{{context}}', context).replace('{{question}}', question);
 
   const completion = await openai.chat.completions.create({
