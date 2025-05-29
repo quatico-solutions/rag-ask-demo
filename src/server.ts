@@ -1,8 +1,14 @@
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { OpenAI } from 'openai';
-import { docs, embedAllDocs, findRelevantDocs } from './support/semanticSearch';
+import { loadDocs, embedAllDocs, findRelevantDocs } from './support/semanticSearch';
+import { readFile } from 'fs/promises';
 import * as process from 'process';
+
+// Load prompt templates and documents from data files
+const systemPromptPromise = readFile(`${process.cwd()}/data/example-nodejs/system-prompt.md`, 'utf-8');
+const userTemplatePromise = readFile(`${process.cwd()}/data/example-nodejs/user-template.md`, 'utf-8');
+const docsPromise = loadDocs();
 // Mock OpenAI for testing
 class MockOpenAI {
   embeddings = {
@@ -55,7 +61,8 @@ app.post('/ask', async (c) => {
     );
   }
 
-  // Embed documents on first request
+  // Load and embed documents on first request
+  const docs = await docsPromise;
   if (!docsEmbeddedPromise) {
     docsEmbeddedPromise = embedAllDocs(openai, docs);
   }
@@ -65,10 +72,10 @@ app.post('/ask', async (c) => {
   const relevantDocs = await findRelevantDocs(openai, docs, question, 2);
   const context = relevantDocs.map((d) => d.text).join('\n');
 
-  // Call OpenAI chat completions with context
-  const system =
-    'You are a helpful assistant. Use the following context to answer if relevant.';
-  const user = `Context:\n${context}\n\nQuestion: ${question}`;
+  // Prepare prompts from external templates
+  const system = await systemPromptPromise;
+  const template = await userTemplatePromise;
+  const user = template.replace('{{context}}', context).replace('{{question}}', question);
 
   const completion = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',

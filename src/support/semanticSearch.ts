@@ -6,32 +6,20 @@ export interface Doc {
   embedding?: number[];
 }
 
-// Example data (could be extended)
-export const docs: Doc[] = [
-  {
-    id: "1",
-    text: "Bitbucket is a web-based version control repository hosting service owned by Atlassian.",
-  },
-  {
-    id: "2",
-    text: "Pull Requests in Bitbucket allow developers to collaborate and discuss code changes.",
-  },
-  {
-    id: "3",
-    text: "OpenAI provides advanced language models and APIs for natural language processing.",
-  },
-  {
-    id: "4",
-    text: "Semantic search uses embeddings to measure document similarity.",
-  },
-  {
-    id: "5",
-    text: "Node.js is a popular server-side JavaScript runtime based on V8.",
-  },
-];
+// Load example documents from markdown file
+import { readFile } from 'fs/promises';
+
+export async function loadDocs(): Promise<Doc[]> {
+  const data = await readFile(`${process.cwd()}/data/example-nodejs/docs.md`, 'utf-8');
+  // Remove YAML frontmatter if present
+  const content = data.replace(/^---\n[\s\S]*?\n---\n?/, '');
+  // Split on markdown separator and trim
+  const blocks = content.split(/^\*{3}$/m).map(b => b.trim()).filter(Boolean);
+  return blocks.map((text, idx) => ({ id: (idx + 1).toString(), text }));
+}
 
 // Embeds all docs in-place
-export async function embedAllDocs(openai: OpenAI, documents: Doc[]): Promise<void> {
+export async function embedAllDocs(openai: any, documents: Doc[]): Promise<void> {
   for (const doc of documents) {
     if (!doc.embedding) {
       const resp = await openai.embeddings.create({
@@ -44,7 +32,7 @@ export async function embedAllDocs(openai: OpenAI, documents: Doc[]): Promise<vo
 }
 
 // Returns top N most similar docs to the query
-export async function findRelevantDocs(openai: OpenAI, documents: Doc[], query: string, n = 2): Promise<Doc[]> {
+export async function findRelevantDocs(openai: any, documents: Doc[], query: string, n = 2): Promise<Doc[]> {
   const resp = await openai.embeddings.create({
     model: "text-embedding-ada-002",
     input: query,
