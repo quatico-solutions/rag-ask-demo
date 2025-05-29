@@ -36,3 +36,18 @@ A minimal OpenAI Retrieval-Augmented Generation (RAG) semantic search demo using
 - `pnpm lint` - run ESLint
 - `pnpm format` - run Prettier formatting
 - `pnpm test` - run Jest tests
+- `pnpm test:e2e` - run Playwright end-to-end tests with mocked OpenAI responses
+
+## End-to-End Tests
+
+Playwright is used for E2E testing with a mocked OpenAI API. Tests start the server automatically.
+
+1. Install dependencies and Playwright browsers:
+   ```sh
+   pnpm install
+   npx playwright install
+   ```
+2. Run E2E tests:
+   ```sh
+   pnpm test:e2e
+   ```

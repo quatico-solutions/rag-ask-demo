@@ -19,6 +19,8 @@ and decision making.
 6. **Commit Suggestions**: After each user instruction, include a suggested `git add . && git commit --all -m 'message'`
    command with a concise commit message to record the change. Always use this full command form when suggesting how to commit.
 
+7. **Run Tests**: After each change, run both unit tests (`pnpm test`) and end-to-end tests (`pnpm test:e2e`) to catch regressions early.
+
 ## Sections
 
 - **Project Overview**: High-level description of the project.

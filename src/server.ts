@@ -3,11 +3,30 @@ import { serve } from '@hono/node-server';
 import { OpenAI } from 'openai';
 import { docs, embedAllDocs, findRelevantDocs } from './support/semanticSearch';
 import * as process from 'process';
+// Mock OpenAI for testing
+class MockOpenAI {
+  embeddings = {
+    create: async ({ input }: any) => {
+      const length = Array.isArray(input) ? input.length : 1;
+      const embedding = Array(length).fill(1);
+      return { data: [{ embedding }] };
+    },
+  };
+  chat = {
+    completions: {
+      create: async ({ messages }: any) => {
+        return { choices: [{ message: { content: 'Hello from mock' } }] };
+      },
+    },
+  };
+}
 
 const app = new Hono();
 
-// Init OpenAI client
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Init OpenAI client (real or mock for tests)
+const openai = process.env.USE_MOCK_OPENAI === 'true'
+  ? new MockOpenAI()
+  : new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 let docsEmbeddedPromise: Promise<void> | null = null;
 
 function htmlBody(inner: string): string {
@@ -58,6 +77,7 @@ app.post('/ask', async (c) => {
       { role: 'user', content: user },
     ],
   });
+  console.log('OpenAI completion:', JSON.stringify(completion, null, 2));
   const answer = completion.choices[0]?.message.content || 'No answer.';
 
   // Prepare debug information
