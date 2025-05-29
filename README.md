@@ -29,7 +29,7 @@ A minimal OpenAI Retrieval-Augmented Generation (RAG) semantic search demo using
 
 ## Available Scripts
 
-- `pnpm dev` - start development server
+- `pnpm dev` - start development server (with hot-reloading via nodemon)
 - `pnpm build` - build for production
 - `pnpm serve` - preview production build
 - `pnpm type-check` - run TypeScript compiler in noEmit mode
