@@ -1,8 +1,8 @@
-import { Hono } from "hono";
-import { serve } from "@hono/node-server";
-import { OpenAI } from "openai";
-import { docs, embedAllDocs, findRelevantDocs } from "./support/semanticSearch";
-import * as process from "process";
+import { Hono } from 'hono';
+import { serve } from '@hono/node-server';
+import { OpenAI } from 'openai';
+import { docs, embedAllDocs, findRelevantDocs } from './support/semanticSearch';
+import * as process from 'process';
 
 const app = new Hono();
 
@@ -15,7 +15,7 @@ function htmlBody(inner: string): string {
 }
 
 // Render the form
-app.get("/", (c) => {
+app.get('/', (c) => {
   const html = `
     <h1>Ask a question (Semantic search & retrieval)</h1>
     <form method="POST" action="/ask">
@@ -27,11 +27,13 @@ app.get("/", (c) => {
 });
 
 // Handle form submission and show answer
-app.post("/ask", async (c) => {
+app.post('/ask', async (c) => {
   const body = await c.req.parseBody();
-  const question = typeof body["question"] === "string" ? body["question"] : "";
+  const question = typeof body['question'] === 'string' ? body['question'] : '';
   if (!question) {
-    return c.html(htmlBody("<p>No question submitted.</p><a href='/'>Back</a>"));
+    return c.html(
+      htmlBody("<p>No question submitted.</p><a href='/'>Back</a>")
+    );
   }
 
   // Embed documents on first request
@@ -42,51 +44,77 @@ app.post("/ask", async (c) => {
 
   // Retrieve
   const relevantDocs = await findRelevantDocs(openai, docs, question, 2);
-  const context = relevantDocs.map(d => d.text).join("\n");
+  const context = relevantDocs.map((d) => d.text).join('\n');
 
   // Call OpenAI chat completions with context
-  const system = "You are a helpful assistant. Use the following context to answer if relevant.";
+  const system =
+    'You are a helpful assistant. Use the following context to answer if relevant.';
   const user = `Context:\n${context}\n\nQuestion: ${question}`;
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-3.5-turbo",
+    model: 'gpt-3.5-turbo',
     messages: [
-      { role: "system", content: system },
-      { role: "user", content: user }
-    ]
+      { role: 'system', content: system },
+      { role: 'user', content: user },
+    ],
   });
-  const answer = completion.choices[0]?.message.content || "No answer.";
+  const answer = completion.choices[0]?.message.content || 'No answer.';
 
-  // Render page with question, answer, and relevant docs
+  // Prepare debug information
+  const debugData = {
+    request: {
+      model: 'gpt-3.5-turbo',
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: user },
+      ],
+    },
+    context,
+    relevantDocs: relevantDocs.map(d => ({ id: d.id, text: d.text })),
+    completion,
+  };
+  const debugJson = JSON.stringify(debugData, null, 2);
+
+  // Render page with question, answer, relevant docs, and debug UI
   const html = `
     <h1>Q: ${escapeHtml(question)}</h1>
     <h2>Answer:</h2>
-    <pre>${escapeHtml(answer)}</pre>
+    <blockquote>${escapeHtml(answer)}</blockquote>
     <h3>Top relevant passages:</h3>
     <ul>
-    ${relevantDocs.map(d => `<li>${escapeHtml(d.text)}</li>`).join("")}
+    ${relevantDocs.map((d) => `<li>${escapeHtml(d.text)}</li>`).join('')}
     </ul>
     <form method='get' action='/'><button>Ask another</button></form>
+    <details>
+      <summary>Debug Info</summary>
+      <pre style="white-space: pre-wrap;">${escapeHtml(debugJson)}</pre>
+    </details>
   `;
   return c.html(htmlBody(html));
 });
 
 function escapeHtml(str: string): string {
-  return str.replace(/[&<>"']/g, s => {
+  return str.replace(/[&<>"']/g, (s) => {
     switch (s) {
-      case "&": return "&amp;";
-      case "<": return "&lt;";
-      case ">": return "&gt;";
-      case '"': return "&quot;";
-      case "'": return "&#39;";
-      default: return s;
+      case '&':
+        return '&amp;';
+      case '<':
+        return '&lt;';
+      case '>':
+        return '&gt;';
+      case '"':
+        return '&quot;';
+      case "'":
+        return '&#39;';
+      default:
+        return s;
     }
   });
 }
 
 // Start server only when run directly
 if (require.main === module) {
-  const port = parseInt(process.env.PORT || "8787");
+  const port = parseInt(process.env.PORT || '8787');
   serve({ fetch: app.fetch, port });
   console.log(`Listening on http://localhost:${port}`);
 }
