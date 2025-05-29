@@ -1,6 +1,31 @@
 # bitbucket-pull-request-rag
 
-A minimal TypeScript project boilerplate with Vite, ESLint, Prettier, and Jest.
+A minimal OpenAI Retrieval-Augmented Generation (RAG) semantic search demo using Node.js, TypeScript, Hono, and OpenAI embeddings & completions.
+
+## Running the App
+
+1. **Install dependencies**
+   ```sh
+   pnpm install
+   # or
+   npm install
+   ```
+
+2. **Set your OpenAI API key**
+   ```sh
+   export OPENAI_API_KEY=sk-...
+   ```
+
+3. **Run the server with native TypeScript**
+   ```sh
+   node --import tsx src/server.ts
+   ```
+
+4. **Open** [http://localhost:8787](http://localhost:8787) **in your browser.**
+   - You’ll see a form to submit a question (all UI is native HTML, no styling).
+   - After submitting a question, you’ll see the answer and the most relevant example passages from the in-memory dataset.
+
+**No Vite/dev web frontend.** All logic runs in Node using the Hono web server and OpenAI API.
 
 ## Available Scripts
 
