@@ -1,3 +1,4 @@
+import 'ts-reset/patch';
 import { hello } from './index';
 
 const app = document.querySelector<HTMLDivElement>('#app');
