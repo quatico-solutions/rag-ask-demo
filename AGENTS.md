@@ -22,6 +22,11 @@ and decision making.
 
 7. **Run Tests**: After each change, run both unit tests (`pnpm test`) and end-to-end tests (`pnpm test:e2e`) to catch regressions early.
 8. **Dependency Management**: Install pnpm globally via corepack (`pnpm i -g corepack`). Always use the pnpm CLI (`pnpm`) to add or remove dependencies so that correct versions are recorded in `package.json`.
+9. **Documentation Updates**: Always update documentation when changing code, especially:
+   - **README.md**: Update when adding features, changing architecture, or modifying usage instructions
+   - **AGENTS.md**: Update project context, design decisions, and open tasks when making significant changes
+   - **JSDoc/TSDoc**: Add comprehensive comments to new types, classes, and functions
+   - **Code Examples**: Update examples in README when APIs or usage patterns change
 
 ## Sections
 
