@@ -1,11 +1,12 @@
 import '../dotenv-config';
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
-import { OpenAI } from 'openai';
+import { generateRAGResponse } from './ai/completions';
+import { generateEmbedding } from './ai/embeddings';
 import {
   loadDocs,
-  embedAllDocs,
-  findRelevantDocs,
+  embedAllDocsWithAI,
+  findRelevantDocsWithAI,
 } from './support/semantic-search';
 import { htmlBody, escapeHtml } from './view/html';
 import { stripFrontmatter } from './view/frontmatter';
@@ -14,6 +15,7 @@ import { readFile } from 'node:fs/promises';
 import { readdirSync } from 'node:fs';
 import path from 'node:path';
 import * as process from 'node:process';
+import { getAIConfig } from './ai/provider-config';
 
 const dataDir = path.join(process.cwd(), 'data');
 const dataSets = readdirSync(dataDir, { withFileTypes: true })
@@ -22,29 +24,8 @@ const dataSets = readdirSync(dataDir, { withFileTypes: true })
 
 const docsPromises: Record<string, Promise<any>> = {};
 const docsEmbeddedPromises: Record<string, Promise<void>> = {};
-class MockOpenAI {
-  embeddings = {
-    create: async ({ input }: any) => {
-      const length = Array.isArray(input) ? input.length : 1;
-      const embedding = Array(length).fill(1);
-      return { data: [{ embedding }] };
-    },
-  };
-  chat = {
-    completions: {
-      create: async ({ messages }: any) => {
-        return { choices: [{ message: { content: 'Hello from mock' } }] };
-      },
-    },
-  };
-}
 
 const app = new Hono();
-
-const openai =
-  process.env.USE_MOCK_OPENAI === 'true'
-    ? new MockOpenAI()
-    : new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 app.get('/', (c) => {
   const requestUrl = new URL(c.req.url, `http://localhost`);
   const dataParam = requestUrl.searchParams.get('data');
@@ -99,42 +80,37 @@ app.post('/ask', async (c) => {
   }
   const docs = await docsPromises[dataParam];
   if (!docsEmbeddedPromises[dataParam]) {
-    docsEmbeddedPromises[dataParam] = embedAllDocs(openai, docs, dataParam);
+    docsEmbeddedPromises[dataParam] = embedAllDocsWithAI(docs, dataParam);
   }
   await docsEmbeddedPromises[dataParam];
-  const relevantDocs = await findRelevantDocs(openai, docs, question, 2);
-  const context = relevantDocs.map((d) => d.text).join('\n');
+  const relevantDocs = await findRelevantDocsWithAI(docs, question, 2);
+  const context = relevantDocs.map((d) => d.text);
 
   const system = await loadSystemPrompt(dataParam);
-  const template = await loadUserTemplate(dataParam);
-  const user = fillUserTemplate(template, context, question);
-
-  const completion = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo',
-    messages: [
-      { role: 'system', content: system },
-      { role: 'user', content: user },
-    ],
-  });
-  const answer = completion.choices[0]?.message.content || 'No answer.';
+  const answer = await generateRAGResponse(question, context, { systemPrompt: system });
   function logToFile(message: string): void {
     const fs = require('fs');
     const timestamp = new Date().toISOString();
     const sanitized = message.replace(/\n{2,}/g, '\n');
     fs.appendFileSync('server.log', `${timestamp}\n${sanitized}\n`);
   }
-  logToFile('OpenAI completion: ' + JSON.stringify(completion, null, 2));
+  
+  const aiConfig = getAIConfig();
   const debugData = {
     request: {
-      model: 'gpt-3.5-turbo',
-      messages: [
-        { role: 'system', content: system },
-        { role: 'user', content: user },
-      ],
+      question,
+      systemPrompt: system,
+      context: context.join('\n'),
+      aiConfig: {
+        completionProvider: aiConfig.completionProvider,
+        completionModel: aiConfig.completionModel,
+        embeddingProvider: aiConfig.embeddingProvider,
+        embeddingModel: aiConfig.embeddingModel,
+      },
     },
-    context,
+    context: context.join('\n'),
     relevantDocs: relevantDocs.map((d) => ({ id: d.id, text: d.text })),
-    completion,
+    answer,
   };
   const debugJson = JSON.stringify(debugData, null, 2);
   const html = `

@@ -2,6 +2,8 @@ import { createHash } from 'node:crypto';
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
 import * as path from 'node:path';
 import { Doc } from '../dataset/DocumentLoader';
+import { generateEmbedding, generateEmbeddings } from '../ai/embeddings';
+import { getAIConfig } from '../ai/provider-config';
 
 /**
  * Cached embedding data structure stored in JSON files.
@@ -164,6 +166,171 @@ export class EmbeddingCache {
 
       // Cache the new embedding
       await this.saveCachedEmbedding(doc, model);
+    }
+
+    return docsToEmbed.length;
+  }
+
+  /**
+   * Clear all cached embeddings for this dataset.
+   * Useful for testing or when you want to force regeneration.
+   */
+  async clearCache(): Promise<void> {
+    try {
+      const { readdir, unlink } = await import('fs/promises');
+      const files = await readdir(this.embeddingsDir);
+      
+      for (const file of files) {
+        if (file.endsWith('.json')) {
+          await unlink(path.join(this.embeddingsDir, file));
+        }
+      }
+    } catch {
+      // Silently ignore errors (directory doesn't exist, permission issues, etc.)
+    }
+  }
+}
+
+/**
+ * Manages caching of document embeddings using the AI SDK.
+ * Similar to EmbeddingCache but uses the new AI SDK modules.
+ * 
+ * @example
+ * ```typescript
+ * const cache = new EmbeddingCacheAI('example-fruits');
+ * 
+ * // Load cached embeddings for documents
+ * await cache.loadCachedEmbeddings(documents);
+ * 
+ * // Embed any documents that don't have cached embeddings
+ * await cache.embedDocuments(documents);
+ * ```
+ */
+export class EmbeddingCacheAI {
+  private readonly dataSet: string;
+  private readonly embeddingsDir: string;
+
+  constructor(dataSet: string) {
+    this.dataSet = dataSet;
+    this.embeddingsDir = path.join(process.cwd(), 'data', dataSet, 'embeddings');
+  }
+
+  /**
+   * Generate SHA256 hash of text content for cache key.
+   * @param text - The text content to hash
+   * @returns SHA256 hash as hexadecimal string
+   */
+  private hashContent(text: string): string {
+    return createHash('sha256').update(text, 'utf8').digest('hex');
+  }
+
+  /**
+   * Get the file path for a cached embedding.
+   * @param contentHash - SHA256 hash of the content
+   * @returns Full path to the cache file
+   */
+  private getCacheFilePath(contentHash: string): string {
+    return path.join(this.embeddingsDir, `${contentHash}.json`);
+  }
+
+  /**
+   * Ensure the embeddings directory exists.
+   */
+  private async ensureEmbeddingsDir(): Promise<void> {
+    try {
+      await access(this.embeddingsDir);
+    } catch {
+      await mkdir(this.embeddingsDir, { recursive: true });
+    }
+  }
+
+  /**
+   * Load a cached embedding from disk if it exists.
+   * @param contentHash - SHA256 hash of the content
+   * @returns Cached embedding data or null if not found
+   */
+  private async loadCachedEmbedding(contentHash: string): Promise<CachedEmbedding | null> {
+    try {
+      const filePath = this.getCacheFilePath(contentHash);
+      const data = await readFile(filePath, 'utf-8');
+      return JSON.parse(data) as CachedEmbedding;
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Save an embedding to the cache.
+   * @param doc - Document with embedding to cache
+   * @param model - Model used to create the embedding
+   */
+  private async saveCachedEmbedding(doc: Doc, model: string): Promise<void> {
+    if (!doc.embedding) {
+      throw new Error('Document has no embedding to cache');
+    }
+
+    await this.ensureEmbeddingsDir();
+
+    const contentHash = this.hashContent(doc.text);
+    const cached: CachedEmbedding = {
+      contentHash,
+      text: doc.text,
+      embedding: doc.embedding,
+      createdAt: new Date().toISOString(),
+      model
+    };
+
+    const filePath = this.getCacheFilePath(contentHash);
+    await writeFile(filePath, JSON.stringify(cached, null, 2));
+  }
+
+  /**
+   * Load cached embeddings for documents that have them.
+   * Updates the documents in-place with cached embeddings.
+   * @param documents - Array of documents to load cached embeddings for
+   * @returns Number of documents that had cached embeddings loaded
+   */
+  async loadCachedEmbeddings(documents: Doc[]): Promise<number> {
+    let loadedCount = 0;
+
+    for (const doc of documents) {
+      if (doc.embedding) {
+        continue; // Already has embedding
+      }
+
+      const contentHash = this.hashContent(doc.text);
+      const cached = await this.loadCachedEmbedding(contentHash);
+
+      if (cached && cached.text === doc.text) {
+        doc.embedding = cached.embedding;
+        loadedCount++;
+      }
+    }
+
+    return loadedCount;
+  }
+
+  /**
+   * Embed documents that don't have embeddings using AI SDK and cache results.
+   * Only processes documents that don't already have embeddings loaded.
+   * @param documents - Array of documents to embed
+   * @returns Number of documents that were newly embedded
+   */
+  async embedDocuments(documents: Doc[]): Promise<number> {
+    const docsToEmbed = documents.filter(doc => !doc.embedding);
+    
+    if (docsToEmbed.length === 0) {
+      return 0;
+    }
+
+    const config = getAIConfig();
+
+    // Embed documents using AI SDK
+    for (const doc of docsToEmbed) {
+      doc.embedding = await generateEmbedding(doc.text);
+      
+      // Cache the new embedding
+      await this.saveCachedEmbedding(doc, config.embeddingModel);
     }
 
     return docsToEmbed.length;

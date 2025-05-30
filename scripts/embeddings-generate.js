@@ -7,8 +7,9 @@
 
 // Use tsx to handle TypeScript imports
 require('tsx/cjs');
-const { loadDocs, embedAllDocs } = require('../src/support/semantic-search.ts');
-const { OpenAI } = require('openai');
+require('../dotenv-config.ts');
+const { loadDocs, embedAllDocsWithAI } = require('../src/support/semantic-search.ts');
+const { getAIConfig } = require('../src/ai/provider-config.ts');
 const path = require('node:path');
 const fs = require('node:fs');
 
@@ -26,17 +27,12 @@ async function generateEmbeddings(datasetName) {
     process.exit(1);
   }
 
-  // Check for OpenAI API key
-  if (!process.env.OPENAI_API_KEY) {
-    console.error('OPENAI_API_KEY environment variable is required');
-    process.exit(1);
-  }
-
   console.log(`Generating embeddings for dataset: ${datasetName}`);
 
   try {
-    // Initialize OpenAI client
-    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    // Validate AI configuration
+    const config = getAIConfig();
+    console.log(`Using ${config.embeddingProvider} with model: ${config.embeddingModel}`);
 
     // Load documents
     console.log('Loading documents...');
@@ -45,7 +41,7 @@ async function generateEmbeddings(datasetName) {
 
     // Generate embeddings (with caching)
     console.log('Generating embeddings...');
-    await embedAllDocs(openai, docs, datasetName);
+    await embedAllDocsWithAI(docs, datasetName);
 
     console.log('✅ Embeddings generation completed successfully');
   } catch (error) {
