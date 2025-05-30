@@ -1,20 +1,19 @@
 {
-  "name": "bitbucket-pull-request-rag",
+  "name": "rag-ask-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A demo of a RAG application using OpenAI's API and Hono.js",
+  "author": "Max Albrecht <1@178.is>",
+  "license": "Unlicense",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --ext ts,tsx --exec tsx src/server.ts",
     "ci": "pnpm run type-check && pnpm run test && pnpm run test:e2e",
     "start": "node --import tsx src/server.ts",
     "type-check": "tsc --noEmit",
-    "test": "pnpm exec jest --no-cache",
+    "test": "jest",
     "test:e2e": "playwright install && playwright test"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@9.15.5+sha256.8472168c3e1fd0bff287e694b053fccbbf20579a3ff9526b6333beab8df65a8d",
   "dependencies": {
     "@hono/node-server": "^1.14.3",
     "ai": "^3.0.23",
@@ -30,5 +29,6 @@
     "ts-reset": "^0.0.1",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
-  }
+  },
+  "packageManager": "pnpm@9.15.5+sha256.8472168c3e1fd0bff287e694b053fccbbf20579a3ff9526b6333beab8df65a8d"
 }
