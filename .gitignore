@@ -5,8 +5,9 @@ node_modules/
 dist/
 build/
 
-# Local env files
-.env
+# Local env files (except .env_example)
+*.env
+!.env_example
 
 # Logs
 *.log

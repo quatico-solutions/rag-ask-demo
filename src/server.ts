@@ -1,3 +1,4 @@
+import '../dotenv-config';
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { OpenAI } from 'openai';
@@ -54,7 +55,14 @@ app.get('/', (c) => {
     const html = `
       <h1>Select dataset</h1>
       <ul>
-        ${dataSets.map(d => `<li><a href="/?data=${encodeURIComponent(d)}">${escapeHtml(d)}</a></li>`).join('')}
+        ${dataSets
+          .map(
+            (d) =>
+              `<li><a href="/?data=${encodeURIComponent(d)}">${escapeHtml(
+                d
+              )}</a></li>`
+          )
+          .join('')}
       </ul>
     `;
     return c.html(htmlBody(html));
@@ -79,7 +87,13 @@ app.post('/ask', async (c) => {
     return c.html(htmlBody(`<p>Unknown dataset.</p><a href='/'>Back</a>`));
   }
   if (!question) {
-    return c.html(htmlBody(`<p>No question submitted.</p><a href='/?data=${encodeURIComponent(dataParam)}'>Back</a>`));
+    return c.html(
+      htmlBody(
+        `<p>No question submitted.</p><a href='/?data=${encodeURIComponent(
+          dataParam
+        )}'>Back</a>`
+      )
+    );
   }
   if (!docsPromises[dataParam]) {
     docsPromises[dataParam] = loadDocs(dataParam);
@@ -90,13 +104,21 @@ app.post('/ask', async (c) => {
   }
   await docsEmbeddedPromises[dataParam];
   const relevantDocs = await findRelevantDocs(openai, docs, question, 2);
-  const context = relevantDocs.map(d => d.text).join('\n');
+  const context = relevantDocs.map((d) => d.text).join('\n');
 
-  const rawSystem = await readFile(`${process.cwd()}/data/${dataParam}/system-prompt.md`, 'utf-8');
+  const rawSystem = await readFile(
+    `${process.cwd()}/data/${dataParam}/system-prompt.md`,
+    'utf-8'
+  );
   const system = stripFrontmatter(rawSystem);
-  const rawTemplate = await readFile(`${process.cwd()}/data/${dataParam}/user-template.md`, 'utf-8');
+  const rawTemplate = await readFile(
+    `${process.cwd()}/data/${dataParam}/user-template.md`,
+    'utf-8'
+  );
   const template = stripFrontmatter(rawTemplate);
-  const user = template.replace('{{context}}', context).replace('{{question}}', question);
+  const user = template
+    .replace('{{context}}', context)
+    .replace('{{question}}', question);
 
   const completion = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',
@@ -114,12 +136,15 @@ app.post('/ask', async (c) => {
   }
   logToFile('OpenAI completion: ' + JSON.stringify(completion, null, 2));
   const debugData = {
-    request: { model: 'gpt-3.5-turbo', messages: [
+    request: {
+      model: 'gpt-3.5-turbo',
+      messages: [
         { role: 'system', content: system },
         { role: 'user', content: user },
-      ] },
+      ],
+    },
     context,
-    relevantDocs: relevantDocs.map(d => ({ id: d.id, text: d.text })),
+    relevantDocs: relevantDocs.map((d) => ({ id: d.id, text: d.text })),
     completion,
   };
   const debugJson = JSON.stringify(debugData, null, 2);
@@ -129,9 +154,11 @@ app.post('/ask', async (c) => {
     <blockquote>${escapeHtml(answer)}</blockquote>
     <h3>Top relevant passages:</h3>
     <ul>
-      ${relevantDocs.map(d => `<li>${escapeHtml(d.text)}</li>`).join('')}
+      ${relevantDocs.map((d) => `<li>${escapeHtml(d.text)}</li>`).join('')}
     </ul>
-    <form method="get" action="/?data=${encodeURIComponent(dataParam)}"><button>Ask another</button></form>
+    <form method="get" action="/?data=${encodeURIComponent(
+      dataParam
+    )}"><button>Ask another</button></form>
     <details>
       <summary>Debug Info</summary>
       <pre style="white-space: pre-wrap;">${escapeHtml(debugJson)}</pre>

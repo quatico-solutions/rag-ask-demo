@@ -20,7 +20,13 @@ Demo and starter kit for a RAG application using OpenAI's API and Hono.js
 2. **Set your OpenAI API key**
 
    ```sh
-   export OPENAI_API_KEY=sk-...
+   cp .env_example .env
+   ```
+
+   Then edit `.env` and set your OpenAI API key:
+
+   ```
+   OPENAI_API_KEY=sk-...
    ```
 
 3. **Run the server with watching and hot-reloading**
