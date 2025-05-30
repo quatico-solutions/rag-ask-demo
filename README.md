@@ -1,31 +1,37 @@
-# bitbucket-pull-request-rag
+# RAG Ask Demo
 
-A minimal OpenAI Retrieval-Augmented Generation (RAG) semantic search demo using Node.js, TypeScript, Hono, and OpenAI embeddings & completions.
+Demo and starter kit for a RAG application using OpenAI's API and Hono.js
+
+## Features
+
+- Semantic search
+- Retrieval-Augmented Generation (RAG)
+- OpenAI embeddings & completions
+- Hono.js
 
 ## Running the App
 
 1. **Install dependencies**
+
    ```sh
    pnpm install
-   # or
-   npm install
    ```
 
 2. **Set your OpenAI API key**
+
    ```sh
    export OPENAI_API_KEY=sk-...
    ```
 
-3. **Run the server with native TypeScript**
+3. **Run the server with watching and hot-reloading**
+
    ```sh
-   node --import tsx src/server.ts
+   pnpm run dev
    ```
 
 4. **Open** [http://localhost:8787](http://localhost:8787) **in your browser.**
    - You’ll see a form to submit a question (all UI is native HTML, no styling).
    - After submitting a question, you’ll see the answer and the most relevant example passages from the in-memory dataset.
-
-**No Vite/dev web frontend.** All logic runs in Node using the Hono web server and OpenAI API.
 
 ## Available Scripts
 
@@ -42,12 +48,8 @@ A minimal OpenAI Retrieval-Augmented Generation (RAG) semantic search demo using
 
 Playwright is used for E2E testing with a mocked OpenAI API. Tests start the server automatically.
 
-1. Install dependencies and Playwright browsers:
-   ```sh
-   pnpm install
-   npx playwright install
-   ```
-2. Run E2E tests:
+1. Run E2E tests:
+
    ```sh
    pnpm test:e2e
    ```
