@@ -5,7 +5,9 @@
       "Bash(pnpm test:*)",
       "WebFetch(domain:github.com)",
       "Bash(git mv:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(USE_MOCK_OPENAI=true pnpm embeddings:generate example-fruits)"
     ],
     "deny": []
   }

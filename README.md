@@ -70,6 +70,28 @@ The system automatically caches OpenAI embeddings to avoid redundant API calls a
 - **Version Control**: Cache files are checked into git for team collaboration
 - **Storage Format**: Each cache file contains the embedding vector, original text, content hash, and metadata
 
+### Embedding Management Scripts
+
+The project includes convenient scripts for managing cached embeddings:
+
+**Generate embeddings for a dataset:**
+```bash
+pnpm embeddings:generate example-fruits
+```
+Creates embedding cache files for all documents in the specified dataset. Requires `OPENAI_API_KEY` environment variable.
+
+**Clean unused cache files:**
+```bash
+pnpm embeddings:clean example-fruits  
+```
+Removes cache files that no longer correspond to current document content (useful after editing documents).
+
+**Update embeddings (generate + clean):**
+```bash
+pnpm embeddings:update example-fruits
+```
+Runs both generate and clean operations in sequence - the recommended way to refresh embeddings after making changes.
+
 ### Customizing Data Loading
 
 The data loading system is modular and extensible. The core types are:
@@ -175,6 +197,9 @@ The UI is intentionally minimal to focus on the RAG functionality rather than fr
 - `pnpm format` - run Prettier formatting
 - `pnpm test` - run Jest tests
 - `pnpm test:e2e` - run Playwright end-to-end tests with mocked OpenAI responses
+- `pnpm embeddings:generate <dataset>` - generate cached embeddings for a dataset
+- `pnpm embeddings:clean <dataset>` - remove unused cached embeddings for a dataset  
+- `pnpm embeddings:update <dataset>` - generate new embeddings and clean unused ones
 
 ## End-to-End Tests
 

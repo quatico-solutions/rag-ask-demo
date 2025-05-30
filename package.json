@@ -11,7 +11,10 @@
     "start": "node --import tsx src/server.ts",
     "type-check": "tsc --noEmit",
     "test": "jest",
-    "test:e2e": "playwright install && playwright test"
+    "test:e2e": "playwright install && playwright test",
+    "embeddings:generate": "node scripts/embeddings-generate.js",
+    "embeddings:clean": "node scripts/embeddings-clean.js",
+    "embeddings:update": "node scripts/embeddings-update.js"
   },
   "keywords": [],
   "dependencies": {
