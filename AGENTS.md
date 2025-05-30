@@ -34,6 +34,11 @@ and decision making.
 11. **Node.js Built-in Imports**: Always import Node.js built-in modules with the `node:` prefix for clarity and future compatibility:
    - **Correct**: `import * as path from 'node:path'`, `import { readFile } from 'node:fs/promises'`
    - **Incorrect**: `import * as path from 'path'`, `import { readFile } from 'fs/promises'`
+12. **Documentation Strategy**: Prefer comprehensive JSDoc/TSDoc comments for implementation details and README for architecture:
+   - **JSDoc/TSDoc**: Complete API documentation with examples, parameters, return types, and usage patterns
+   - **README**: High-level architecture, data flow, system design, and getting started information
+   - **Code Comments**: Minimal but exhaustive - only explain unusual implementations, workarounds, or performance optimizations
+   - **Avoid**: Obvious comments that restate what the code clearly shows
 
 ## Sections
 

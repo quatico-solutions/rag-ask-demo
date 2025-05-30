@@ -15,15 +15,13 @@ import { readdirSync } from 'node:fs';
 import path from 'node:path';
 import * as process from 'node:process';
 
-// Discover available datasets
 const dataDir = path.join(process.cwd(), 'data');
 const dataSets = readdirSync(dataDir, { withFileTypes: true })
   .filter((d) => d.isDirectory())
   .map((d) => d.name);
-// Cache for loaded documents and embeddings per dataset
+
 const docsPromises: Record<string, Promise<any>> = {};
 const docsEmbeddedPromises: Record<string, Promise<void>> = {};
-// Mock OpenAI for testing
 class MockOpenAI {
   embeddings = {
     create: async ({ input }: any) => {
@@ -43,12 +41,10 @@ class MockOpenAI {
 
 const app = new Hono();
 
-// Init OpenAI client (real or mock for tests)
 const openai =
   process.env.USE_MOCK_OPENAI === 'true'
     ? new MockOpenAI()
     : new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-// Home page: list datasets or show Ask UI
 app.get('/', (c) => {
   const requestUrl = new URL(c.req.url, `http://localhost`);
   const dataParam = requestUrl.searchParams.get('data');
@@ -79,12 +75,9 @@ app.get('/', (c) => {
   return c.html(htmlBody(html));
 });
 
-// Redirect non-POST requests to /ask to /
 app.get('/ask', (c) => {
   return c.redirect('/');
 });
-
-// Handle form submission and show answer
 app.post('/ask', async (c) => {
   const body = await c.req.parseBody();
   const dataParam = typeof body['data'] === 'string' ? body['data'] : '';
@@ -175,7 +168,6 @@ app.post('/ask', async (c) => {
   return c.html(htmlBody(html));
 });
 
-// Start server only when run directly
 if (require.main === module) {
   const port = parseInt(process.env.PORT || '8787');
   serve({ fetch: app.fetch, port });

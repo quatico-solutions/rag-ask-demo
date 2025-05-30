@@ -184,7 +184,7 @@ export class EmbeddingCache {
         }
       }
     } catch {
-      // Directory doesn't exist or other error - that's fine
+      // Silently ignore errors (directory doesn't exist, permission issues, etc.)
     }
   }
 }

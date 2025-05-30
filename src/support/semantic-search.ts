@@ -20,18 +20,11 @@ export async function loadDocs(dataSet: string = 'example-nodejs', loader: Docum
  */
 export async function embedAllDocs(openai: any, documents: Doc[], dataSet?: string): Promise<void> {
   if (dataSet) {
-    // Use caching when dataset is provided
     const cache = new EmbeddingCache(dataSet);
-    
-    // First, try to load cached embeddings
     const cachedCount = await cache.loadCachedEmbeddings(documents);
-    
-    // Then embed any remaining documents and cache them
     const newEmbeddings = await cache.embedDocuments(openai, documents);
-    
     console.log(`Embeddings: ${cachedCount} loaded from cache, ${newEmbeddings} newly created`);
   } else {
-    // Fallback to original behavior without caching
     for (const doc of documents) {
       if (!doc.embedding) {
         const resp = await openai.embeddings.create({
@@ -44,14 +37,20 @@ export async function embedAllDocs(openai: any, documents: Doc[], dataSet?: stri
   }
 }
 
-// Returns top N most similar docs to the query
+/**
+ * Find the most relevant documents for a query using semantic similarity.
+ * @param openai - OpenAI client instance
+ * @param documents - Array of documents to search through (must have embeddings)
+ * @param query - The search query to find relevant documents for
+ * @param n - Number of top results to return (default: 2)
+ * @returns Promise resolving to array of most relevant documents
+ */
 export async function findRelevantDocs(openai: any, documents: Doc[], query: string, n = 2): Promise<Doc[]> {
   const resp = await openai.embeddings.create({
     model: "text-embedding-ada-002",
     input: query,
   });
   const qEmbed = resp.data[0].embedding;
-  // Score all docs
   const scored = documents.map(doc => ({
     doc,
     score: doc.embedding ? cosineSimilarity(doc.embedding, qEmbed) : -Infinity
@@ -60,6 +59,12 @@ export async function findRelevantDocs(openai: any, documents: Doc[], query: str
   return scored.slice(0, n).map(s => s.doc);
 }
 
+/**
+ * Calculate cosine similarity between two embedding vectors.
+ * @param a - First embedding vector
+ * @param b - Second embedding vector
+ * @returns Similarity score between -1 and 1 (1 = identical, 0 = orthogonal, -1 = opposite)
+ */
 export function cosineSimilarity(a: number[], b: number[]): number {
   let dot = 0;
   let normA = 0;
