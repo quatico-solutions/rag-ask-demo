@@ -159,10 +159,22 @@ app.post('/ask', async (c) => {
     <form method="get" action="/?data=${encodeURIComponent(
       dataParam
     )}"><button>Ask another</button></form>
-    <details>
-      <summary>Debug Info</summary>
-      <pre style="white-space: pre-wrap;">${escapeHtml(debugJson)}</pre>
-    </details>
+    <section>
+      <h3>Debug Info</h3>
+      <details>
+        <summary>Request</summary>
+        <pre style="white-space: pre-wrap;">${escapeHtml(debugJson)}</pre>
+      </details>
+      <h4>Context</h4>
+      <details>
+        <summary>System Prompt</summary>
+        <pre style="white-space: pre-wrap;">${escapeHtml(system)}</pre>
+      </details>
+      <details>
+        <summary>Documents</summary>
+        <pre style="white-space: pre-wrap;">${escapeHtml(stripFrontmatter(await readFile(`${process.cwd()}/data/${dataParam}/docs.md`, 'utf-8')))}</pre>
+      </details>
+    </section>
   `;
   return c.html(htmlBody(html));
 });
