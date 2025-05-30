@@ -9,7 +9,8 @@
       "Bash(chmod:*)",
       "Bash(USE_MOCK_OPENAI=true pnpm embeddings:generate example-fruits)",
       "Bash(pnpm embeddings:update:*)",
-      "Bash(OPENAI_API_KEY=test pnpm run type-check 2 >& 1)"
+      "Bash(OPENAI_API_KEY=test pnpm run type-check 2 >& 1)",
+      "Bash(pnpm run test:*)"
     ],
     "deny": []
   }

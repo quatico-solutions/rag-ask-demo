@@ -40,6 +40,14 @@ and decision making.
    - **Code Comments**: Minimal but exhaustive - only explain unusual implementations, workarounds, or performance optimizations
    - **Avoid**: Obvious comments that restate what the code clearly shows
 
+13. **Configuration Management Strategy**: Fail fast with helpful error messages instead of silent fallbacks:
+   - **No Default Values**: Don't provide fallback strings for required configuration (API keys, model names, etc.)
+   - **Strict Validation**: Validate all required environment variables at startup with clear error messages
+   - **Helpful Errors**: Include examples and guidance in configuration error messages
+   - **Environment Precedence**: Shell environment variables override .env file values (use `dotenv.config({ override: false })`)
+   - **Test Configuration**: Use `cross-env` in package.json scripts to set test environment variables explicitly
+   - **Mock Support**: Provide `USE_MOCK_OPENAI=true` environment variable for testing without real API calls
+
 ## Sections
 
 - **Project Overview**: High-level description of the project.

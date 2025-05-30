@@ -2,6 +2,15 @@ import { embed, embedMany } from 'ai';
 import { getAIConfig, createProviders, getProvider } from './provider-config';
 
 /**
+ * Mock embedding function for testing that returns a simple vector.
+ */
+function mockGenerateEmbedding(text: string): number[] {
+  // Generate deterministic embedding based on text length for testing
+  const length = 1536; // Standard OpenAI embedding size
+  return Array(length).fill(0).map((_, i) => (text.length + i) / 1000);
+}
+
+/**
  * Generate an embedding vector for a single text input.
  * 
  * @param text - The text to generate an embedding for
@@ -14,6 +23,11 @@ import { getAIConfig, createProviders, getProvider } from './provider-config';
  * ```
  */
 export async function generateEmbedding(text: string): Promise<number[]> {
+  // Use mock for testing
+  if (process.env.USE_MOCK_OPENAI === 'true') {
+    return mockGenerateEmbedding(text);
+  }
+
   const config = getAIConfig();
   const providers = createProviders(config);
   const provider = getProvider(providers, config.embeddingProvider);
@@ -45,6 +59,11 @@ export async function generateEmbedding(text: string): Promise<number[]> {
 export async function generateEmbeddings(texts: string[]): Promise<number[][]> {
   if (texts.length === 0) {
     return [];
+  }
+
+  // Use mock for testing
+  if (process.env.USE_MOCK_OPENAI === 'true') {
+    return texts.map(text => mockGenerateEmbedding(text));
   }
 
   const config = getAIConfig();

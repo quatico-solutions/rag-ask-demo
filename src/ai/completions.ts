@@ -2,6 +2,13 @@ import { generateText } from 'ai';
 import { getAIConfig, createProviders, getProvider } from './provider-config';
 
 /**
+ * Mock completion function for testing that returns a simple response.
+ */
+function mockGenerateCompletion(prompt: string, systemPrompt?: string): string {
+  return `Mock response to: ${prompt}${systemPrompt ? ` (System: ${systemPrompt.substring(0, 50)}...)` : ''}`;
+}
+
+/**
  * Configuration for completion requests.
  */
 export interface CompletionOptions {
@@ -33,6 +40,11 @@ export async function generateCompletion(
   prompt: string, 
   options: CompletionOptions = {}
 ): Promise<string> {
+  // Use mock for testing
+  if (process.env.USE_MOCK_OPENAI === 'true') {
+    return mockGenerateCompletion(prompt, options.systemPrompt);
+  }
+
   const config = getAIConfig();
   const providers = createProviders(config);
   const provider = getProvider(providers, config.completionProvider);
