@@ -16,9 +16,12 @@ and decision making.
    resources.
 5. **Update Regularly**: Whenever the project context changes or new decisions are
    made, update this file to keep the memory current.
-6. **Commit Suggestions**: After each user instruction, include a suggested `git add . && git commit --all -m 'message'`
-   command with a concise commit message to record the change. Always use this full command form when suggesting how to commit.
-   If running in a sandbox, keep suggesting the git commit message. If not in a sandbox, commit directly.
+6. **MANDATORY COMMITS**: You MUST commit after completing each user command/instruction. This is not optional:
+   - **In Sandbox**: Suggest `git add . && git commit --all -m 'message'` command with concise commit message
+   - **Not in Sandbox**: ALWAYS commit directly using git commands after completing work
+   - **Every Command**: Each user instruction must result in a commit when code/files are changed
+   - **No Exceptions**: Even small changes, configuration updates, or documentation edits must be committed
+   - **Immediate Action**: Commit as soon as the requested work is complete, don't wait for user prompting
 
 7. **Run Tests**: After each change, run both unit tests (`pnpm test`) and end-to-end tests (`pnpm test:e2e`) to catch regressions early.
 8. **Dependency Management**: Install pnpm globally via corepack (`pnpm i -g corepack`). Always use the pnpm CLI (`pnpm`) to add or remove dependencies so that correct versions are recorded in `package.json`.
