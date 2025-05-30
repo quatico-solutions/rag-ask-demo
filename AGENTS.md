@@ -18,6 +18,7 @@ and decision making.
    made, update this file to keep the memory current.
 6. **Commit Suggestions**: After each user instruction, include a suggested `git add . && git commit --all -m 'message'`
    command with a concise commit message to record the change. Always use this full command form when suggesting how to commit.
+   If running in a sandbox, keep suggesting the git commit message. If not in a sandbox, commit directly.
 
 7. **Run Tests**: After each change, run both unit tests (`pnpm test`) and end-to-end tests (`pnpm test:e2e`) to catch regressions early.
 8. **Dependency Management**: Install pnpm globally via corepack (`pnpm i -g corepack`). Always use the pnpm CLI (`pnpm`) to add or remove dependencies so that correct versions are recorded in `package.json`.
