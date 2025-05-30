@@ -70,5 +70,14 @@ describe('semanticSearch', () => {
       const hasCarrot = docs.some(d => d.text.includes('Carrot'));
       expect(hasCarrot).toBe(true);
     });
+
+    it('loads the cars dataset correctly', async () => {
+      const docs = await loadDocs('example-cars');
+      expect(docs.length).toBeGreaterThan(0);
+      const hasV8 = docs.some(d => d.text.includes('V8'));
+      const hasElectric = docs.some(d => d.text.includes('electric')); 
+      expect(hasV8).toBe(true);
+      expect(hasElectric).toBe(true);
+    });
   });
 });
