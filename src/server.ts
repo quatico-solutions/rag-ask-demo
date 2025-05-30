@@ -9,6 +9,7 @@ import {
 } from './support/semanticSearch';
 import { htmlBody, escapeHtml } from './view/html';
 import { stripFrontmatter } from './view/frontmatter';
+import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './dataset/templateLoader';
 import { readFile } from 'fs/promises';
 import { readdirSync } from 'fs';
 import path from 'path';
@@ -111,19 +112,9 @@ app.post('/ask', async (c) => {
   const relevantDocs = await findRelevantDocs(openai, docs, question, 2);
   const context = relevantDocs.map((d) => d.text).join('\n');
 
-  const rawSystem = await readFile(
-    `${process.cwd()}/data/${dataParam}/system-prompt.md`,
-    'utf-8'
-  );
-  const system = stripFrontmatter(rawSystem);
-  const rawTemplate = await readFile(
-    `${process.cwd()}/data/${dataParam}/user-template.md`,
-    'utf-8'
-  );
-  const template = stripFrontmatter(rawTemplate);
-  const user = template
-    .replace('{{context}}', context)
-    .replace('{{question}}', question);
+  const system = await loadSystemPrompt(dataParam);
+  const template = await loadUserTemplate(dataParam);
+  const user = fillUserTemplate(template, context, question);
 
   const completion = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',

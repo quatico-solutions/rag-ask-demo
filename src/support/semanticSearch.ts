@@ -1,24 +1,12 @@
 import { OpenAI } from "openai";
+import { Doc, DocumentLoader, MarkdownDocumentLoader } from '../dataset/DocumentLoader';
 
-export interface Doc {
-  id: string;
-  text: string;
-  embedding?: number[];
-}
+export { Doc };
 
-// Load example documents from markdown file
-import { readFile } from 'fs/promises';
+const defaultLoader = new MarkdownDocumentLoader();
 
-export async function loadDocs(dataSet: string = 'example-nodejs'): Promise<Doc[]> {
-  const data = await readFile(
-    `${process.cwd()}/data/${dataSet}/docs.md`,
-    'utf-8'
-  );
-  // Remove YAML frontmatter if present (supports both LF and CRLF line endings)
-  const content = data.replace(/^---\s*[\r\n]+[\s\S]*?[\r\n]+---\s*[\r\n]*/, '');
-  // Split on markdown separator and trim
-  const blocks = content.split(/^\*{3}$/m).map(b => b.trim()).filter(Boolean);
-  return blocks.map((text, idx) => ({ id: (idx + 1).toString(), text }));
+export async function loadDocs(dataSet: string = 'example-nodejs', loader: DocumentLoader = defaultLoader): Promise<Doc[]> {
+  return loader.loadDocuments(dataSet);
 }
 
 // Embeds all docs in-place
