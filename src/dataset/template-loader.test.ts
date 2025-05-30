@@ -1,7 +1,7 @@
 import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './template-loader';
-import { writeFile, mkdir, rm } from 'fs/promises';
-import * as path from 'path';
-import * as os from 'os';
+import { writeFile, mkdir, rm } from 'node:fs/promises';
+import * as path from 'node:path';
+import * as os from 'node:os';
 
 const testDataDir = path.join(os.tmpdir(), 'test-data-' + Date.now());
 const testDataSet = 'test-dataset';

@@ -10,10 +10,10 @@ import {
 import { htmlBody, escapeHtml } from './view/html';
 import { stripFrontmatter } from './view/frontmatter';
 import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './dataset/template-loader';
-import { readFile } from 'fs/promises';
-import { readdirSync } from 'fs';
-import path from 'path';
-import * as process from 'process';
+import { readFile } from 'node:fs/promises';
+import { readdirSync } from 'node:fs';
+import path from 'node:path';
+import * as process from 'node:process';
 
 // Discover available datasets
 const dataDir = path.join(process.cwd(), 'data');

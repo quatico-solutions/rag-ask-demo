@@ -1,6 +1,6 @@
-import { createHash } from 'crypto';
-import { readFile, writeFile, mkdir, access } from 'fs/promises';
-import * as path from 'path';
+import { createHash } from 'node:crypto';
+import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
+import * as path from 'node:path';
 import { Doc } from '../dataset/DocumentLoader';
 
 /**

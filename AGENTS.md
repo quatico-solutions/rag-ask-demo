@@ -31,6 +31,9 @@ and decision making.
    - **Functions/utilities**: `kebab-case` (e.g., `semantic-search.ts`, `template-loader.ts`)
    - **Classes**: `PascalCase` (e.g., `DocumentLoader.ts`, `UserManager.ts`)
    - **Tests**: Match the file they test with `.test.ts` suffix
+11. **Node.js Built-in Imports**: Always import Node.js built-in modules with the `node:` prefix for clarity and future compatibility:
+   - **Correct**: `import * as path from 'node:path'`, `import { readFile } from 'node:fs/promises'`
+   - **Incorrect**: `import * as path from 'path'`, `import { readFile } from 'fs/promises'`
 
 ## Sections
 

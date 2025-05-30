@@ -9,8 +9,8 @@
 require('tsx/cjs');
 const { loadDocs, embedAllDocs } = require('../src/support/semantic-search.ts');
 const { OpenAI } = require('openai');
-const path = require('path');
-const fs = require('fs');
+const path = require('node:path');
+const fs = require('node:fs');
 
 async function generateEmbeddings(datasetName) {
   if (!datasetName) {

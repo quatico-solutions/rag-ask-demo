@@ -1,8 +1,8 @@
 import { EmbeddingCache } from './embedding-cache';
 import { Doc } from '../dataset/DocumentLoader';
-import { writeFile, mkdir, rm, readFile } from 'fs/promises';
-import * as path from 'path';
-import * as os from 'os';
+import { writeFile, mkdir, rm, readFile } from 'node:fs/promises';
+import * as path from 'node:path';
+import * as os from 'node:os';
 
 const testDataDir = path.join(os.tmpdir(), 'embedding-cache-test-' + Date.now());
 const testDataSet = 'test-dataset';
@@ -104,7 +104,7 @@ describe('EmbeddingCache', () => {
       expect(testDocs.every(doc => doc.embedding && doc.embedding.length === 1536)).toBe(true);
       
       // Verify cache files were created
-      const files = await import('fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
+      const files = await import('node:fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
       expect(files.filter(f => f.endsWith('.json'))).toHaveLength(3);
     });
 
@@ -140,9 +140,9 @@ describe('EmbeddingCache', () => {
       await freshCache.embedDocuments(mockOpenAI, singleDoc, 'custom-model');
       
       // Read the cache file directly
-      const files = await import('fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
+      const files = await import('node:fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
       const cacheFile = files.find(f => f.endsWith('.json') && f.includes(
-        require('crypto').createHash('sha256').update('Fresh test document for metadata test', 'utf8').digest('hex')
+        require('node:crypto').createHash('sha256').update('Fresh test document for metadata test', 'utf8').digest('hex')
       ))!;
       const cacheData = JSON.parse(await readFile(path.join(testEmbeddingsDir, cacheFile), 'utf-8'));
       

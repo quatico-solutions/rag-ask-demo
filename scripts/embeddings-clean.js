@@ -9,9 +9,9 @@
 // Use tsx to handle TypeScript imports
 require('tsx/cjs');
 const { loadDocs } = require('../src/support/semantic-search.ts');
-const { createHash } = require('crypto');
-const path = require('path');
-const fs = require('fs').promises;
+const { createHash } = require('node:crypto');
+const path = require('node:path');
+const fs = require('node:fs').promises;
 
 /**
  * Generate SHA256 hash of text content.
