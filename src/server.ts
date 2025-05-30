@@ -106,7 +106,7 @@ app.post('/ask', async (c) => {
   }
   const docs = await docsPromises[dataParam];
   if (!docsEmbeddedPromises[dataParam]) {
-    docsEmbeddedPromises[dataParam] = embedAllDocs(openai, docs);
+    docsEmbeddedPromises[dataParam] = embedAllDocs(openai, docs, dataParam);
   }
   await docsEmbeddedPromises[dataParam];
   const relevantDocs = await findRelevantDocs(openai, docs, question, 2);

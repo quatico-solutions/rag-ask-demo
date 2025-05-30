@@ -17,7 +17,7 @@ describe('semanticSearch', () => {
   });
 
   describe('embedAllDocs', () => {
-    it('embeds all docs without embedding property', async () => {
+    it('embeds all docs without embedding property (no caching)', async () => {
       const docs: Doc[] = [
         { id: '1', text: 'a' },
         { id: '2', text: 'b' },
@@ -27,9 +27,36 @@ describe('semanticSearch', () => {
           create: async ({ input }: any) => ({ data: [{ embedding: [1, 2, 3] }] }),
         },
       };
-      await embedAllDocs(openai, docs);
+      await embedAllDocs(openai, docs); // No dataset provided, no caching
       expect(docs[0].embedding).toEqual([1, 2, 3]);
       expect(docs[1].embedding).toEqual([1, 2, 3]);
+    });
+
+    it('uses caching when dataset is provided', async () => {
+      const docs: Doc[] = [
+        { id: '1', text: 'test document one' },
+        { id: '2', text: 'test document two' },
+      ];
+      const openai = {
+        embeddings: {
+          create: jest.fn().mockImplementation(async ({ input }: any) => ({ 
+            data: [{ embedding: new Array(1536).fill(0.1) }] 
+          })),
+        },
+      };
+
+      // Mock console.log to capture cache messages
+      const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      try {
+        await embedAllDocs(openai, docs, 'test-dataset');
+        
+        expect(docs[0].embedding).toEqual(expect.any(Array));
+        expect(docs[1].embedding).toEqual(expect.any(Array));
+        expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('Embeddings:'));
+      } finally {
+        consoleSpy.mockRestore();
+      }
     });
   });
 

@@ -19,6 +19,7 @@ The demo implements semantic search using OpenAI's embedding and completion APIs
 
 **Key AI Components:**
 - **Embeddings**: Convert text to vector representations for semantic similarity
+- **Embedding Cache**: Automatically cache embeddings by content hash to avoid redundant API calls
 - **Semantic Search**: Find relevant documents without exact keyword matching
 - **Prompt Engineering**: System prompts guide the AI's behavior and response style
 - **Context Window Management**: Only the most relevant documents are included to stay within token limits
@@ -32,11 +33,13 @@ data/
 ├── example-fruits/
 │   ├── docs.md           # Documents separated by ***
 │   ├── system-prompt.md  # AI behavior instructions
-│   └── user-template.md  # Message template with {{context}} and {{question}} placeholders
+│   ├── user-template.md  # Message template with {{context}} and {{question}} placeholders
+│   └── embeddings/       # Cached embeddings (auto-generated)
 ├── example-nodejs/
 │   ├── docs.md
 │   ├── system-prompt.md
-│   └── user-template.md
+│   ├── user-template.md
+│   └── embeddings/       # Cached embeddings (auto-generated)
 └── ...
 ```
 
@@ -58,6 +61,14 @@ Second document with more information.
 
 Third document about something else.
 ```
+
+**Embedding Cache (`embeddings/`):**
+The system automatically caches OpenAI embeddings to avoid redundant API calls and improve performance. Each document's embedding is stored as a JSON file named by the SHA256 hash of its content:
+
+- **Cache Invalidation**: When document content changes, the hash changes, automatically invalidating old embeddings
+- **Performance**: Subsequent runs load embeddings from cache instead of calling the API
+- **Version Control**: Cache files are checked into git for team collaboration
+- **Storage Format**: Each cache file contains the embedding vector, original text, content hash, and metadata
 
 ### Customizing Data Loading
 
