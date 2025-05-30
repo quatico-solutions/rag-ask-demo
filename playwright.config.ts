@@ -9,9 +9,11 @@ export default defineConfig({
     ignoreHTTPSErrors: true,
   },
   webServer: {
-    command: 'USE_MOCK_OPENAI=true pnpm dev',
+    // Start the server directly without nodemon to avoid kill permission issues
+    command: 'USE_MOCK_OPENAI=true tsx src/server.ts',
     url: 'http://localhost:8787',
     timeout: 120 * 1000,
-    reuseExistingServer: !process.env.CI,
+    // Always start a fresh server to avoid permission issues
+    reuseExistingServer: false,
   },
 });

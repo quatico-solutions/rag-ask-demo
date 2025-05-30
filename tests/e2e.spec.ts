@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('ask form returns mock answer and shows debug info', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/?data=example-fruits');
   await page.fill('input[name="question"]', 'Test question');
   await page.click('input[type="submit"]');
   await expect(page.locator('h1')).toHaveText('Q: Test question');

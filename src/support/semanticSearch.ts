@@ -9,8 +9,11 @@ export interface Doc {
 // Load example documents from markdown file
 import { readFile } from 'fs/promises';
 
-export async function loadDocs(): Promise<Doc[]> {
-  const data = await readFile(`${process.cwd()}/data/example-nodejs/docs.md`, 'utf-8');
+export async function loadDocs(dataSet: string = 'example-nodejs'): Promise<Doc[]> {
+  const data = await readFile(
+    `${process.cwd()}/data/${dataSet}/docs.md`,
+    'utf-8'
+  );
   // Remove YAML frontmatter if present (supports both LF and CRLF line endings)
   const content = data.replace(/^---\s*[\r\n]+[\s\S]*?[\r\n]+---\s*[\r\n]*/, '');
   // Split on markdown separator and trim

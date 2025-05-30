@@ -57,5 +57,11 @@ describe('semanticSearch', () => {
       expect(docs[0]).toHaveProperty('id');
       expect(docs[0]).toHaveProperty('text');
     });
+    it('loads the fruits dataset correctly', async () => {
+      const docs = await loadDocs('example-fruits');
+      expect(docs.length).toBeGreaterThan(0);
+      const hasApple = docs.some(d => d.text.includes('Apple'));
+      expect(hasApple).toBe(true);
+    });
   });
 });
