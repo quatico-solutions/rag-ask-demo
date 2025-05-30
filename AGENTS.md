@@ -27,6 +27,10 @@ and decision making.
    - **AGENTS.md**: Update project context, design decisions, and open tasks when making significant changes
    - **JSDoc/TSDoc**: Add comprehensive comments to new types, classes, and functions
    - **Code Examples**: Update examples in README when APIs or usage patterns change
+10. **File Naming Convention**: Follow consistent naming schemes:
+   - **Functions/utilities**: `kebab-case` (e.g., `semantic-search.ts`, `template-loader.ts`)
+   - **Classes**: `PascalCase` (e.g., `DocumentLoader.ts`, `UserManager.ts`)
+   - **Tests**: Match the file they test with `.test.ts` suffix
 
 ## Sections
 

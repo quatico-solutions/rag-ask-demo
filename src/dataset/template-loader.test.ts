@@ -1,4 +1,4 @@
-import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './templateLoader';
+import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './template-loader';
 import { writeFile, mkdir, rm } from 'fs/promises';
 import * as path from 'path';
 import * as os from 'os';

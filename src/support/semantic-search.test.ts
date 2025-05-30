@@ -1,4 +1,4 @@
-import { Doc, loadDocs, embedAllDocs, findRelevantDocs, cosineSimilarity } from './semanticSearch';
+import { Doc, loadDocs, embedAllDocs, findRelevantDocs, cosineSimilarity } from './semantic-search';
 
 describe('semanticSearch', () => {
   describe('cosineSimilarity', () => {

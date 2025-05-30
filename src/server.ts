@@ -6,10 +6,10 @@ import {
   loadDocs,
   embedAllDocs,
   findRelevantDocs,
-} from './support/semanticSearch';
+} from './support/semantic-search';
 import { htmlBody, escapeHtml } from './view/html';
 import { stripFrontmatter } from './view/frontmatter';
-import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './dataset/templateLoader';
+import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './dataset/template-loader';
 import { readFile } from 'fs/promises';
 import { readdirSync } from 'fs';
 import path from 'path';
