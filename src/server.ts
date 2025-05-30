@@ -78,6 +78,11 @@ app.get('/', (c) => {
   return c.html(htmlBody(html));
 });
 
+// Redirect non-POST requests to /ask to /
+app.get('/ask', (c) => {
+  return c.redirect('/');
+});
+
 // Handle form submission and show answer
 app.post('/ask', async (c) => {
   const body = await c.req.parseBody();
