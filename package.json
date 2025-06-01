@@ -6,8 +6,8 @@
   "license": "Unlicense",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch src --ext ts,tsx --exec tsx src/server.ts",
-    "dev:enhanced": "nodemon --watch src --ext ts,tsx --exec tsx src/server-enhanced.ts",
+    "dev": "nodemon src/server.ts",
+    "dev:enhanced": "nodemon src/server-enhanced.ts",
     "ci": "pnpm run type-check && pnpm run test && pnpm run test:e2e",
     "start": "node --import tsx src/server.ts",
     "start:enhanced": "node --import tsx src/server-enhanced.ts",
