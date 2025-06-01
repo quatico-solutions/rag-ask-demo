@@ -8,7 +8,7 @@
 
 // Use tsx to handle TypeScript imports
 require('tsx/cjs');
-const { loadDocs } = require('../src/support/semantic-search.ts');
+const { loadDocs } = require('../src/features/semantic-search.ts');
 const { createHash } = require('node:crypto');
 const path = require('node:path');
 const fs = require('node:fs').promises;
@@ -47,7 +47,7 @@ async function cleanEmbeddings(datasetName) {
     console.log(`Found ${docs.length} current documents`);
 
     // Get expected cache file names
-    const expectedHashes = new Set(docs.map(doc => hashContent(doc.text)));
+    const expectedHashes = new Set(docs.map((doc) => hashContent(doc.text)));
     console.log(`Expected ${expectedHashes.size} cache files`);
 
     // Check embeddings directory
@@ -60,7 +60,7 @@ async function cleanEmbeddings(datasetName) {
       return;
     }
 
-    const cacheFiles = existingFiles.filter(file => file.endsWith('.json'));
+    const cacheFiles = existingFiles.filter((file) => file.endsWith('.json'));
     console.log(`Found ${cacheFiles.length} existing cache files`);
 
     // Identify unused cache files
@@ -78,7 +78,7 @@ async function cleanEmbeddings(datasetName) {
     }
 
     console.log(`Found ${unusedFiles.length} unused cache files`);
-    
+
     // Delete unused files
     for (const file of unusedFiles) {
       const filePath = path.join(embeddingsDir, file);

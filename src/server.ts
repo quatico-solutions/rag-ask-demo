@@ -29,11 +29,85 @@ const dataSets = readdirSync(dataDir, { withFileTypes: true })
 const docsPromises: Record<string, Promise<any>> = {};
 const docsEmbeddedPromises: Record<string, Promise<void>> = {};
 
+async function fetchLMStudioModels(): Promise<{ completion: string[], embedding: string[] }> {
+  const aiConfig = getAIConfig();
+  const result: { completion: string[], embedding: string[] } = { completion: [], embedding: [] };
+
+  if (aiConfig.completionProvider === 'lmstudio' || aiConfig.embeddingProvider === 'lmstudio') {
+    try {
+      const response = await fetch(`${aiConfig.lmstudioBaseUrl}/models`);
+      const data = await response.json();
+      const models = data.data || [];
+      
+      // Separate models by type based on common naming patterns
+      const completionModels: string[] = [];
+      const embeddingModels: string[] = [];
+      
+      models.forEach((model: any) => {
+        const modelId = model.id;
+        // Check if it's an embedding model based on common patterns
+        if (modelId.includes('embedding') || 
+            modelId.includes('sentence-transformers') || 
+            modelId.includes('nomic-embed') ||
+            modelId.includes('e5-') ||
+            modelId.includes('bge-')) {
+          embeddingModels.push(modelId);
+        } else {
+          // Assume it's a completion/chat model
+          completionModels.push(modelId);
+        }
+      });
+      
+      if (aiConfig.completionProvider === 'lmstudio') {
+        result.completion = completionModels;
+      }
+      if (aiConfig.embeddingProvider === 'lmstudio') {
+        result.embedding = embeddingModels;
+      }
+    } catch (error) {
+      console.error('Failed to fetch LM Studio models:', error);
+    }
+  }
+  
+  return result;
+}
+
 const app = new Hono();
-app.get('/', (c) => {
+app.get('/', async (c) => {
   const requestUrl = new URL(c.req.url, `http://localhost`);
   const dataParam = requestUrl.searchParams.get('data');
   if (!dataParam || !dataSets.includes(dataParam)) {
+    const aiConfig = getAIConfig();
+    let modelInfo = '';
+    
+    if (aiConfig.completionProvider === 'lmstudio' || aiConfig.embeddingProvider === 'lmstudio') {
+      const models = await fetchLMStudioModels();
+      modelInfo = `
+        <h2>LM Studio Configuration</h2>
+        <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px;">
+          <h3>Current Settings:</h3>
+          <ul>
+            <li><strong>Completion Provider:</strong> ${aiConfig.completionProvider}</li>
+            <li><strong>Completion Model:</strong> ${aiConfig.completionModel}</li>
+            <li><strong>Embedding Provider:</strong> ${aiConfig.embeddingProvider}</li>
+            <li><strong>Embedding Model:</strong> ${aiConfig.embeddingModel}</li>
+            <li><strong>LM Studio URL:</strong> ${aiConfig.lmstudioBaseUrl}</li>
+          </ul>
+          
+          <h3>Available Models in LM Studio:</h3>
+          ${models.completion.length > 0 || models.embedding.length > 0 ? `
+            <ul>
+              ${models.completion.length > 0 ? `<li><strong>For Completions:</strong> ${models.completion.join(', ')}</li>` : ''}
+              ${models.embedding.length > 0 ? `<li><strong>For Embeddings:</strong> ${models.embedding.join(', ')}</li>` : ''}
+            </ul>
+          ` : `
+            <p style="color: red;">⚠️ No models loaded in LM Studio. Please load a model in the LM Studio developer page.</p>
+            <p>The error you're seeing suggests that no models are currently loaded in LM Studio.</p>
+          `}
+        </div>
+      `;
+    }
+    
     const html = `
       <h1>Select dataset</h1>
       <ul>
@@ -46,6 +120,7 @@ app.get('/', (c) => {
           )
           .join('')}
       </ul>
+      ${modelInfo}
     `;
     return c.html(htmlBody(html));
   }
@@ -140,6 +215,16 @@ app.post('/ask', async (c) => {
     )}"><button>Ask another</button></form>
     <section>
       <h3>Debug Info</h3>
+      <details>
+        <summary>AI Configuration</summary>
+        <ul>
+          <li><strong>Completion Provider:</strong> ${escapeHtml(aiConfig.completionProvider)}</li>
+          <li><strong>Completion Model:</strong> ${escapeHtml(aiConfig.completionModel)}</li>
+          <li><strong>Embedding Provider:</strong> ${escapeHtml(aiConfig.embeddingProvider)}</li>
+          <li><strong>Embedding Model:</strong> ${escapeHtml(aiConfig.embeddingModel)}</li>
+          ${aiConfig.lmstudioBaseUrl ? `<li><strong>LM Studio URL:</strong> ${escapeHtml(aiConfig.lmstudioBaseUrl)}</li>` : ''}
+        </ul>
+      </details>
       <details>
         <summary>Request</summary>
         <pre style="white-space: pre-wrap;">${escapeHtml(debugJson)}</pre>
