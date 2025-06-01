@@ -13,6 +13,7 @@ import {
 } from './features/enhanced-semantic-search';
 import { loadSystemPrompt } from './dataset/template-loader';
 import { escapeHtml, htmlBody } from './view/html';
+import { validatedRAG, robustValidatedRAG } from './features/validated-rag';
 
 const app = new Hono();
 
@@ -189,6 +190,153 @@ ${escapeHtml(result.text)}
   `;
 
   return c.html(htmlBody(resultsHtml));
+});
+
+// Validated RAG endpoint
+app.post('/validated-ask/:data', async (c) => {
+  const dataParam = c.req.param('data');
+  const body = await c.req.parseBody();
+  const question = typeof body['question'] === 'string' ? body['question'] : '';
+  const strictMode = body['strictMode'] === 'true';
+  const requireAttribution = body['requireAttribution'] !== 'false'; // Default to true
+
+  if (!dataParam || !dataSets.includes(dataParam)) {
+    return c.html(htmlBody(`<p>Unknown dataset.</p><a href='/'>Back</a>`));
+  }
+
+  if (!question) {
+    return c.html(
+      htmlBody(
+        `<p>No question submitted.</p><a href='/validated?data=${encodeURIComponent(
+          dataParam
+        )}'>Back</a>`
+      )
+    );
+  }
+
+  console.log(`[VALIDATED RAG] Question: "${question}" | Dataset: ${dataParam} | Strict: ${strictMode}`);
+  
+  try {
+    const result = await validatedRAG(question, dataParam, {
+      maxResults: 3,
+      strictMode,
+      requireAttribution
+    });
+
+    const statusColor = result.status === 'accepted' ? 'green' : result.status === 'flagged' ? 'orange' : 'red';
+    const statusIcon = result.status === 'accepted' ? '✅' : result.status === 'flagged' ? '⚠️' : '❌';
+    
+    let resultsHtml = `
+      <h1>Validated RAG Response</h1>
+      <h2>Question: ${escapeHtml(question)}</h2>
+      
+      <div style="border: 2px solid ${statusColor}; padding: 15px; margin: 15px 0; border-radius: 5px;">
+        <h3>${statusIcon} Response Status: <span style="color: ${statusColor}">${result.status.toUpperCase()}</span></h3>
+        <div style="background: #f9f9f9; padding: 15px; border-radius: 3px; margin: 10px 0;">
+          <pre style="white-space: pre-wrap; margin: 0;">${escapeHtml(result.response)}</pre>
+        </div>
+      </div>
+
+      <h3>Validation Results</h3>
+      <ul>
+        <li><strong>Grounded in Documents:</strong> ${result.validation.isGrounded ? '✅ Yes' : '❌ No'}</li>
+        <li><strong>Confidence:</strong> ${(result.validation.confidence * 100).toFixed(1)}%</li>
+        <li><strong>Has Source Attribution:</strong> ${result.validation.hasSourceAttribution ? '✅ Yes' : '❌ No'}</li>
+        <li><strong>Recommendation:</strong> ${result.validation.recommendation}</li>
+      </ul>
+
+      ${result.validation.concerns.length > 0 ? `
+        <h4>Validation Concerns:</h4>
+        <ul>
+          ${result.validation.concerns.map(concern => `<li>${escapeHtml(concern)}</li>`).join('')}
+        </ul>
+      ` : ''}
+
+      ${result.quickValidation.suspiciousKeywords.length > 0 ? `
+        <h4>Suspicious Keywords Detected:</h4>
+        <ul>
+          ${result.quickValidation.suspiciousKeywords.map(keyword => `<li>"${escapeHtml(keyword)}"</li>`).join('')}
+        </ul>
+      ` : ''}
+
+      <h3>Source Documents (${result.sources.length})</h3>
+      <ol>
+    `;
+
+    for (const source of result.sources) {
+      resultsHtml += `
+        <li style="margin-bottom: 20px;">
+          <strong>Score: ${source.score.toFixed(3)}</strong> (Doc ${source.id})
+          <pre style="white-space: pre-wrap; background: #f5f5f5; padding: 10px; margin: 10px 0;">
+  ${escapeHtml(source.text)}
+          </pre>
+        </li>
+      `;
+    }
+
+    resultsHtml += `
+      </ol>
+      
+      <details>
+        <summary>Debug Information</summary>
+        <pre>${escapeHtml(JSON.stringify(result, null, 2))}</pre>
+      </details>
+      
+      <a href="/validated?data=${encodeURIComponent(dataParam)}">Ask another question</a>
+    `;
+
+    return c.html(htmlBody(resultsHtml));
+  } catch (error) {
+    console.error('Error in validated RAG:', error);
+    return c.html(
+      htmlBody(`<p>Error: ${escapeHtml(String(error))}</p><a href="/validated?data=${encodeURIComponent(dataParam)}">Back</a>`)
+    );
+  }
+});
+
+// Validated RAG interface page
+app.get('/validated', async (c) => {
+  const dataParam = c.req.query('data');
+  
+  let html = '<h1>Validated RAG Demo</h1>';
+  
+  if (!dataParam) {
+    html += `
+      <h2>Select a dataset:</h2>
+      <ul>
+        ${dataSets.map(dataSet => `
+          <li><a href="/validated?data=${encodeURIComponent(dataSet)}">${escapeHtml(dataSet)}</a></li>
+        `).join('')}
+      </ul>
+    `;
+  } else if (dataSets.includes(dataParam)) {
+    html += `
+      <h2>Dataset: ${escapeHtml(dataParam)}</h2>
+      <p><strong>Validated RAG</strong> - Responses are validated to ensure they contain only information from the source documents.</p>
+      
+      <form method="post" action="/validated-ask/${encodeURIComponent(dataParam)}">
+        <label for="question">Ask a question:</label><br>
+        <textarea name="question" id="question" rows="3" cols="80" placeholder="Enter your question here..." required></textarea><br><br>
+        
+        <label>
+          <input type="checkbox" name="strictMode" value="true"> Strict Mode (reject flagged responses)
+        </label><br>
+        
+        <label>
+          <input type="checkbox" name="requireAttribution" value="true" checked> Require Source Attribution
+        </label><br><br>
+        
+        <button type="submit">Ask Question (Validated)</button>
+      </form>
+      
+      <hr>
+      <p><a href="/?data=${encodeURIComponent(dataParam)}">Switch to Regular RAG</a> | <a href="/validated">Choose Different Dataset</a></p>
+    `;
+  } else {
+    html += `<p>Unknown dataset: ${escapeHtml(dataParam)}</p>`;
+  }
+  
+  return c.html(htmlBody(html));
 });
 
 const port = 8787;
