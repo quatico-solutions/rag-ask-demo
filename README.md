@@ -65,11 +65,12 @@ Third document about something else.
 ```
 
 **Embedding Cache (`embeddings/`):**
-The system automatically caches OpenAI embeddings to avoid redundant API calls and improve performance. Each document's embedding is stored as a JSON file named by the SHA256 hash of its content:
+The system automatically caches embeddings to avoid redundant API calls and improve performance. Embeddings are organized by provider and model in subfolders: `embeddings/{provider}/{model}/`. Each document's embedding is stored as a JSON file named by the SHA256 hash of its content:
 
+- **Provider Isolation**: Different AI providers and models use separate cache directories
 - **Cache Invalidation**: When document content changes, the hash changes, automatically invalidating old embeddings
 - **Performance**: Subsequent runs load embeddings from cache instead of calling the API
-- **Version Control**: Cache files are checked into git for team collaboration
+- **Model Support**: Works with OpenAI, LM Studio, and other embedding providers
 - **Storage Format**: Each cache file contains the embedding vector, original text, content hash, and metadata
 
 ### Embedding Management Scripts
@@ -255,6 +256,11 @@ The enhanced server runs on the same port (8787) and is fully backwards compatib
 - `pnpm embeddings:generate <dataset>` - generate cached embeddings for a dataset
 - `pnpm embeddings:clean <dataset>` - remove unused cached embeddings for a dataset  
 - `pnpm embeddings:update <dataset>` - generate new embeddings and clean unused ones
+
+### Cache Management
+- `pnpm cache:list` - list all cached embeddings organized by provider and model
+- `pnpm cache:clear <dataset> [provider] [model]` - clear specific or all caches
+- `pnpm cache:setup <dataset>` - create directories for popular embedding models
 
 ## End-to-End Tests
 
