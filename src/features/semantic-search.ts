@@ -1,6 +1,10 @@
-import { Doc, DocumentLoader, MarkdownDocumentLoader } from '../dataset/DocumentLoader';
+import {
+  Doc,
+  DocumentLoader,
+  MarkdownDocumentLoader,
+} from '../dataset/DocumentLoader';
 import { generateEmbedding, cosineSimilarity } from '../ai/embeddings';
-import { EmbeddingCacheAI } from './embedding-cache';
+import { EmbeddingCacheAI } from '../support/embedding-cache';
 
 // Re-export cosineSimilarity for tests
 export { cosineSimilarity };
@@ -9,7 +13,10 @@ export type { Doc };
 
 const defaultLoader = new MarkdownDocumentLoader();
 
-export async function loadDocs(dataSet: string = 'example-nodejs', loader: DocumentLoader = defaultLoader): Promise<Doc[]> {
+export async function loadDocs(
+  dataSet: string = 'example-nodejs',
+  loader: DocumentLoader = defaultLoader
+): Promise<Doc[]> {
   return loader.loadDocuments(dataSet);
 }
 
@@ -20,12 +27,17 @@ export async function loadDocs(dataSet: string = 'example-nodejs', loader: Docum
  * @param dataSet - Dataset name for cache management
  * @returns Promise that resolves when all documents are embedded
  */
-export async function embedAllDocsWithAI(documents: Doc[], dataSet?: string): Promise<void> {
+export async function embedAllDocsWithAI(
+  documents: Doc[],
+  dataSet?: string
+): Promise<void> {
   if (dataSet) {
     const cache = new EmbeddingCacheAI(dataSet);
     const cachedCount = await cache.loadCachedEmbeddings(documents);
     const newEmbeddings = await cache.embedDocuments(documents);
-    console.log(`Embeddings: ${cachedCount} loaded from cache, ${newEmbeddings} newly created`);
+    console.log(
+      `Embeddings: ${cachedCount} loaded from cache, ${newEmbeddings} newly created`
+    );
   } else {
     for (const doc of documents) {
       if (!doc.embedding) {
@@ -42,14 +54,18 @@ export async function embedAllDocsWithAI(documents: Doc[], dataSet?: string): Pr
  * @param n - Number of top results to return (default: 2)
  * @returns Promise resolving to array of most relevant documents
  */
-export async function findRelevantDocsWithAI(documents: Doc[], query: string, n = 2): Promise<Doc[]> {
+export async function findRelevantDocsWithAI(
+  documents: Doc[],
+  query: string,
+  n = 2
+): Promise<Doc[]> {
   const qEmbed = await generateEmbedding(query);
-  const scored = documents.map(doc => ({
+  const scored = documents.map((doc) => ({
     doc,
-    score: doc.embedding ? cosineSimilarity(doc.embedding, qEmbed) : -Infinity
+    score: doc.embedding ? cosineSimilarity(doc.embedding, qEmbed) : -Infinity,
   }));
   scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, n).map(s => s.doc);
+  return scored.slice(0, n).map((s) => s.doc);
 }
 
 // Legacy functions for backward compatibility

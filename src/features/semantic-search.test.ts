@@ -1,4 +1,10 @@
-import { Doc, loadDocs, embedAllDocsWithAI, findRelevantDocsWithAI, cosineSimilarity } from './semantic-search';
+import {
+  Doc,
+  loadDocs,
+  embedAllDocsWithAI,
+  findRelevantDocsWithAI,
+  cosineSimilarity,
+} from './semantic-search';
 
 describe('semanticSearch', () => {
   describe('cosineSimilarity', () => {
@@ -7,7 +13,9 @@ describe('semanticSearch', () => {
       const b = [1, 2, 3];
       const c = [3, 2, 1];
       expect(cosineSimilarity(a, b)).toBeCloseTo(1);
-      expect(cosineSimilarity(a, c)).toBeCloseTo((1 * 3 + 2 * 2 + 3 * 1) / (Math.sqrt(14) * Math.sqrt(14)));
+      expect(cosineSimilarity(a, c)).toBeCloseTo(
+        (1 * 3 + 2 * 2 + 3 * 1) / (Math.sqrt(14) * Math.sqrt(14))
+      );
     });
 
     it('returns 0 when a vector is zero', () => {
@@ -21,21 +29,23 @@ describe('semanticSearch', () => {
       // Mock the generateEmbedding function
       const { generateEmbedding } = require('../ai/embeddings');
       const originalGenerateEmbedding = generateEmbedding;
-      
+
       // Replace with mock
-      require('../ai/embeddings').generateEmbedding = jest.fn().mockResolvedValue([1, 2, 3]);
-      
+      require('../ai/embeddings').generateEmbedding = jest
+        .fn()
+        .mockResolvedValue([1, 2, 3]);
+
       const { embedAllDocsWithAI } = require('./semantic-search');
-      
+
       const docs: Doc[] = [
         { id: '1', text: 'a' },
         { id: '2', text: 'b' },
       ];
-      
+
       await embedAllDocsWithAI(docs); // No dataset provided, no caching
       expect(docs[0].embedding).toEqual([1, 2, 3]);
       expect(docs[1].embedding).toEqual([1, 2, 3]);
-      
+
       // Restore original
       require('../ai/embeddings').generateEmbedding = originalGenerateEmbedding;
     });
@@ -65,7 +75,7 @@ describe('semanticSearch', () => {
     it('loads the fruits dataset correctly', async () => {
       const docs = await loadDocs('example-fruits');
       expect(docs.length).toBeGreaterThan(0);
-      const hasApple = docs.some(d => d.text.includes('Apple'));
+      const hasApple = docs.some((d) => d.text.includes('Apple'));
       expect(hasApple).toBe(true);
     });
 
@@ -80,8 +90,8 @@ describe('semanticSearch', () => {
     it('loads the cars dataset correctly', async () => {
       const docs = await loadDocs('example-cars');
       expect(docs.length).toBeGreaterThan(0);
-      const hasV8 = docs.some(d => d.text.includes('V8'));
-      const hasElectric = docs.some(d => d.text.includes('electric')); 
+      const hasV8 = docs.some((d) => d.text.includes('V8'));
+      const hasElectric = docs.some((d) => d.text.includes('electric'));
       expect(hasV8).toBe(true);
       expect(hasElectric).toBe(true);
     });

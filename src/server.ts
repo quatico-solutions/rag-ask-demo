@@ -7,10 +7,14 @@ import {
   loadDocs,
   embedAllDocsWithAI,
   findRelevantDocsWithAI,
-} from './support/semantic-search';
+} from './features/semantic-search';
 import { htmlBody, escapeHtml } from './view/html';
 import { stripFrontmatter } from './view/frontmatter';
-import { loadSystemPrompt, loadUserTemplate, fillUserTemplate } from './dataset/template-loader';
+import {
+  loadSystemPrompt,
+  loadUserTemplate,
+  fillUserTemplate,
+} from './dataset/template-loader';
 import { readFile } from 'node:fs/promises';
 import { readdirSync } from 'node:fs';
 import path from 'node:path';
@@ -87,14 +91,16 @@ app.post('/ask', async (c) => {
   const context = relevantDocs.map((d) => d.text);
 
   const system = await loadSystemPrompt(dataParam);
-  const answer = await generateRAGResponse(question, context, { systemPrompt: system });
+  const answer = await generateRAGResponse(question, context, {
+    systemPrompt: system,
+  });
   function logToFile(message: string): void {
     const fs = require('fs');
     const timestamp = new Date().toISOString();
     const sanitized = message.replace(/\n{2,}/g, '\n');
     fs.appendFileSync('server.log', `${timestamp}\n${sanitized}\n`);
   }
-  
+
   const aiConfig = getAIConfig();
   const debugData = {
     request: {
@@ -137,7 +143,14 @@ app.post('/ask', async (c) => {
       </details>
       <details>
         <summary>Documents</summary>
-        <pre style="white-space: pre-wrap;">${escapeHtml(stripFrontmatter(await readFile(`${process.cwd()}/data/${dataParam}/docs.md`, 'utf-8')))}</pre>
+        <pre style="white-space: pre-wrap;">${escapeHtml(
+          stripFrontmatter(
+            await readFile(
+              `${process.cwd()}/data/${dataParam}/docs.md`,
+              'utf-8'
+            )
+          )
+        )}</pre>
       </details>
     </section>
   `;
