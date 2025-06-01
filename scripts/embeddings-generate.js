@@ -8,7 +8,7 @@
 // Use tsx to handle TypeScript imports
 require('tsx/cjs');
 require('../dotenv-config.ts');
-const { loadDocs, embedAllDocsWithAI } = require('../src/support/semantic-search.ts');
+const { loadDocsWithChunking, embedAllDocsEnhanced } = require('../src/features/enhanced-semantic-search.ts');
 const { getAIConfig } = require('../src/ai/provider-config.ts');
 const path = require('node:path');
 const fs = require('node:fs');
@@ -34,14 +34,14 @@ async function generateEmbeddings(datasetName) {
     const config = getAIConfig();
     console.log(`Using ${config.embeddingProvider} with model: ${config.embeddingModel}`);
 
-    // Load documents
+    // Load documents with chunking
     console.log('Loading documents...');
-    const docs = await loadDocs(datasetName);
-    console.log(`Loaded ${docs.length} documents`);
+    const docs = await loadDocsWithChunking(datasetName);
+    console.log(`Loaded ${docs.length} documents/chunks`);
 
     // Generate embeddings (with caching)
     console.log('Generating embeddings...');
-    await embedAllDocsWithAI(docs, datasetName);
+    await embedAllDocsEnhanced(docs, datasetName);
 
     console.log('✅ Embeddings generation completed successfully');
   } catch (error) {
