@@ -1,6 +1,9 @@
+import '../dotenv-config';
 import { serve } from '@hono/node-server';
 import { Hono } from 'hono';
-import { readdir } from 'node:fs/promises';
+import { readdirSync } from 'node:fs';
+import * as path from 'node:path';
+import * as process from 'node:process';
 import { getAIConfig } from './ai/provider-config';
 import { generateRAGResponse } from './ai/completions';
 import {
@@ -10,17 +13,14 @@ import {
 } from './features/enhanced-semantic-search';
 import { loadSystemPrompt } from './dataset/template-loader';
 import { escapeHtml, htmlBody } from './view/html';
-import dotenv from 'dotenv';
-
-// Load environment variables
-dotenv.config();
 
 const app = new Hono();
 
-const dataSets = await readdir(`${process.cwd()}/data`, { withFileTypes: true })
-  .then((entries) => entries.filter((e) => e.isDirectory()).map((e) => e.name));
+const dataDir = path.join(process.cwd(), 'data');
+const dataSets = readdirSync(dataDir, { withFileTypes: true })
+  .filter((d) => d.isDirectory())
+  .map((d) => d.name);
 
-// Cache for search results
 const searchCache: Record<string, Promise<ScoredDoc[]>> = {};
 
 app.get('/', async (c) => {

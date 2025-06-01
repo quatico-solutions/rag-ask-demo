@@ -12,7 +12,8 @@
       "Bash(OPENAI_API_KEY=test pnpm run type-check 2 >& 1)",
       "Bash(pnpm run test:*)",
       "WebFetch(domain:platform.openai.com)",
-      "Bash(pnpm type-check:*)"
+      "Bash(pnpm type-check:*)",
+      "Bash(timeout 5 pnpm start:*)"
     ],
     "deny": []
   }
