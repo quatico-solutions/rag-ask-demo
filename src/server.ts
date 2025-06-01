@@ -107,12 +107,20 @@ app.post('/ask', async (c) => {
       question,
       systemPrompt: system,
       context: context.join('\n'),
+      model: aiConfig.completionModel,
       aiConfig: {
         completionProvider: aiConfig.completionProvider,
         completionModel: aiConfig.completionModel,
         embeddingProvider: aiConfig.embeddingProvider,
         embeddingModel: aiConfig.embeddingModel,
       },
+    },
+    completion: {
+      choices: [{
+        message: {
+          content: answer
+        }
+      }]
     },
     context: context.join('\n'),
     relevantDocs: relevantDocs.map((d) => ({ id: d.id, text: d.text })),

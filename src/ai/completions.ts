@@ -5,7 +5,7 @@ import { getAIConfig, createProviders, getProvider } from './provider-config';
  * Mock completion function for testing that returns a simple response.
  */
 function mockGenerateCompletion(prompt: string, systemPrompt?: string): string {
-  return `Mock response to: ${prompt}${systemPrompt ? ` (System: ${systemPrompt.substring(0, 50)}...)` : ''}`;
+  return 'Hello from mock';
 }
 
 /**
