@@ -19,7 +19,10 @@
       "Bash(npm run lint)",
       "Bash(cat:*)",
       "Bash(find:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr edit:*)"
     ],
     "deny": []
   }
