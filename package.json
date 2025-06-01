@@ -7,8 +7,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --ext ts,tsx --exec tsx src/server.ts",
+    "dev:enhanced": "nodemon --watch src --ext ts,tsx --exec tsx src/server-enhanced.ts",
     "ci": "pnpm run type-check && pnpm run test && pnpm run test:e2e",
     "start": "node --import tsx src/server.ts",
+    "start:enhanced": "node --import tsx src/server-enhanced.ts",
     "type-check": "tsc --noEmit",
     "test": "cross-env USE_MOCK_OPENAI=true AI_COMPLETION_PROVIDER=openai AI_COMPLETION_MODEL=gpt-3.5-turbo AI_EMBEDDING_PROVIDER=openai AI_EMBEDDING_MODEL=text-embedding-ada-002 OPENAI_API_KEY=test-key jest",
     "test:e2e": "playwright install && cross-env USE_MOCK_OPENAI=true AI_COMPLETION_PROVIDER=openai AI_COMPLETION_MODEL=gpt-3.5-turbo AI_EMBEDDING_PROVIDER=openai AI_EMBEDDING_MODEL=text-embedding-ada-002 OPENAI_API_KEY=test-key playwright test",

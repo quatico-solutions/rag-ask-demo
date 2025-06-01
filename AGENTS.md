@@ -114,11 +114,18 @@ rag-ask-demo/
 ├── src/                    # Source code
 │   ├── ai/                # AI provider integration
 │   ├── dataset/           # Document loading and templates
-│   ├── features/          # Core features (semantic search)
+│   │   ├── DocumentLoader.ts
+│   │   ├── ChunkedDocumentLoader.ts  # NEW: Chunking support
+│   │   ├── document-chunker.ts       # NEW: Chunking logic
+│   │   └── template-loader.ts
+│   ├── features/          # Core features
+│   │   ├── semantic-search.ts
+│   │   └── enhanced-semantic-search.ts  # NEW: Hybrid search
 │   ├── support/           # Utilities (caching)
 │   ├── types/             # TypeScript type definitions
 │   ├── view/              # HTML generation utilities
-│   └── server.ts          # Main HTTP server
+│   ├── server.ts          # Basic HTTP server
+│   └── server-enhanced.ts # NEW: Enhanced server
 ├── data/                  # Datasets directory
 │   └── {dataset}/         # Individual dataset folders
 │       ├── docs.md        # Documents (separated by ***)
@@ -132,6 +139,28 @@ rag-ask-demo/
 ```
 
 ### Key Files and Functions
+
+#### Enhanced RAG Features (NEW)
+- **document-chunker.ts**
+  - `chunkDocument()` (line 80): Split documents into intelligent chunks
+  - `estimateTokens()` (line 45): Estimate token count for text
+  - `shouldChunk()` (line 225): Determine if document needs chunking
+  - Configurable chunk size, overlap, and sentence preservation
+- **ChunkedDocumentLoader.ts**
+  - Extends `DocumentLoader` with automatic chunking support
+  - `loadDocuments()` (line 40): Load and chunk large documents
+  - `loadOriginalDocuments()` (line 95): Load without chunking
+  - `getDocumentChunks()` (line 115): Get chunks for specific document
+- **enhanced-semantic-search.ts**
+  - `semanticSearchEnhanced()` (line 245): Main enhanced search function
+  - `calculateKeywordScore()` (line 75): Keyword matching score
+  - `highlightKeywords()` (line 105): Extract keyword highlights
+  - `findRelevantDocsEnhanced()` (line 165): Hybrid search implementation
+  - `applyResultDiversification()` (line 220): Prevent too many chunks from same doc
+- **server-enhanced.ts**
+  - Enhanced server with chunking and hybrid search UI
+  - Configurable search parameters via web form
+  - Displays chunk metadata and relevance scores
 
 #### AI Integration (`src/ai/`)
 - **provider-config.ts**

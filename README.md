@@ -2,6 +2,8 @@
 
 Demo and starter kit for a RAG application using OpenAI's API and Hono.js
 
+> **Enhanced Version Available!** This demo now includes an enhanced RAG implementation with intelligent document chunking and hybrid search. Run `pnpm dev:enhanced` to try it out.
+
 ## How This Demo Works
 
 This application demonstrates a complete Retrieval-Augmented Generation (RAG) pipeline that allows users to ask questions about custom datasets. Here's how it works:
@@ -150,6 +152,54 @@ The application uses **Hono.js** as a lightweight web framework:
 
 The UI is intentionally minimal to focus on the RAG functionality rather than frontend complexity.
 
+## Enhanced RAG Features
+
+The enhanced version (`pnpm dev:enhanced`) includes significant improvements for better retrieval quality:
+
+### 1. **Intelligent Document Chunking**
+- **Automatic Chunking**: Large documents are automatically split into ~500 token chunks
+- **Sentence Preservation**: Chunks respect sentence boundaries for better readability
+- **Overlapping Context**: Chunks include overlapping content to preserve context
+- **Smart Threshold**: Only documents >1.5x chunk size are split (avoids unnecessary chunking)
+
+### 2. **Hybrid Search**
+- **Dual Scoring**: Combines embedding similarity with keyword matching
+- **Better Precision**: Excellent for finding specific terms, error codes, or technical details
+- **Configurable Weights**: Adjust the balance between semantic and keyword search
+- **Keyword Highlighting**: Shows matching keywords in search results
+
+### 3. **Enhanced Context Display**
+- **Chunk Metadata**: Shows which document and chunk each result comes from
+- **Score Transparency**: Displays relevance scores for each result
+- **Highlighted Excerpts**: Shows keyword matches in context
+- **Configurable Results**: Choose how many results to retrieve (1-10)
+
+### Example Improvements:
+```
+Query: "What is the API timeout?"
+
+Basic RAG:
+- Returns entire 2000-word API documentation section
+- User must scan through to find timeout information
+
+Enhanced RAG:
+- Returns specific chunk: "The API timeout is set to 30 seconds by default..."
+- Highlights the matching keywords
+- Shows relevance score and chunk location
+```
+
+### Running the Enhanced Version:
+
+```bash
+# Development mode with hot-reloading
+pnpm dev:enhanced
+
+# Production mode
+pnpm start:enhanced
+```
+
+The enhanced server runs on the same port (8787) and is fully backwards compatible with existing datasets.
+
 ## Features
 
 - Semantic search
@@ -189,14 +239,19 @@ The UI is intentionally minimal to focus on the RAG functionality rather than fr
 
 ## Available Scripts
 
-- `pnpm dev` - start development server (with hot-reloading via nodemon)
-- `pnpm build` - build for production
-- `pnpm serve` - preview production build
+### Server Commands
+- `pnpm dev` - start development server (basic RAG)
+- `pnpm dev:enhanced` - start enhanced development server (with chunking and hybrid search)
+- `pnpm start` - run production server (basic RAG)
+- `pnpm start:enhanced` - run production enhanced server
+
+### Development Commands
 - `pnpm type-check` - run TypeScript compiler in noEmit mode
-- `pnpm lint` - run ESLint
-- `pnpm format` - run Prettier formatting
 - `pnpm test` - run Jest tests
 - `pnpm test:e2e` - run Playwright end-to-end tests with mocked OpenAI responses
+- `pnpm ci` - run all checks (type-check, tests, e2e)
+
+### Embedding Management
 - `pnpm embeddings:generate <dataset>` - generate cached embeddings for a dataset
 - `pnpm embeddings:clean <dataset>` - remove unused cached embeddings for a dataset  
 - `pnpm embeddings:update <dataset>` - generate new embeddings and clean unused ones
