@@ -95,7 +95,7 @@ export async function generateEmbeddings(texts: string[]): Promise<number[][]> {
  */
 export function cosineSimilarity(a: number[], b: number[]): number {
   if (a.length !== b.length) {
-    throw new Error('Embedding vectors must have the same length');
+    throw new Error(`Embedding vectors must have the same length. Got ${a.length} and ${b.length} dimensions.`);
   }
 
   let dot = 0;
