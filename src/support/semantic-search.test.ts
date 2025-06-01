@@ -1,0 +1,111 @@
+import { Doc, loadDocs, embedAllDocs, findRelevantDocs, cosineSimilarity } from './semantic-search';
+
+describe('semanticSearch', () => {
+  describe('cosineSimilarity', () => {
+    it('calculates cosine similarity correctly', () => {
+      const a = [1, 2, 3];
+      const b = [1, 2, 3];
+      const c = [3, 2, 1];
+      expect(cosineSimilarity(a, b)).toBeCloseTo(1);
+      expect(cosineSimilarity(a, c)).toBeCloseTo((1 * 3 + 2 * 2 + 3 * 1) / (Math.sqrt(14) * Math.sqrt(14)));
+    });
+
+    it('returns 0 when a vector is zero', () => {
+      expect(cosineSimilarity([], [])).toBe(0);
+      expect(cosineSimilarity([0, 0], [1, 2])).toBe(0);
+    });
+  });
+
+  describe('embedAllDocs', () => {
+    it('embeds all docs without embedding property (no caching)', async () => {
+      const docs: Doc[] = [
+        { id: '1', text: 'a' },
+        { id: '2', text: 'b' },
+      ];
+      const openai = {
+        embeddings: {
+          create: async ({ input }: any) => ({ data: [{ embedding: [1, 2, 3] }] }),
+        },
+      };
+      await embedAllDocs(openai, docs); // No dataset provided, no caching
+      expect(docs[0].embedding).toEqual([1, 2, 3]);
+      expect(docs[1].embedding).toEqual([1, 2, 3]);
+    });
+
+    it('uses caching when dataset is provided', async () => {
+      const docs: Doc[] = [
+        { id: '1', text: 'test document one' },
+        { id: '2', text: 'test document two' },
+      ];
+      const openai = {
+        embeddings: {
+          create: jest.fn().mockImplementation(async ({ input }: any) => ({ 
+            data: [{ embedding: new Array(1536).fill(0.1) }] 
+          })),
+        },
+      };
+
+      // Mock console.log to capture cache messages
+      const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+
+      try {
+        await embedAllDocs(openai, docs, 'test-dataset');
+        
+        expect(docs[0].embedding).toEqual(expect.any(Array));
+        expect(docs[1].embedding).toEqual(expect.any(Array));
+        expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('Embeddings:'));
+      } finally {
+        consoleSpy.mockRestore();
+      }
+    });
+  });
+
+  describe('findRelevantDocs', () => {
+    it('finds top relevant docs based on query', async () => {
+      const docs: Doc[] = [
+        { id: '1', text: 'foo', embedding: [1, 0] },
+        { id: '2', text: 'bar', embedding: [0, 1] },
+      ];
+      const openai = {
+        embeddings: {
+          create: async ({ input }: any) => ({ data: [{ embedding: [1, 0] }] }),
+        },
+      };
+      const results = await findRelevantDocs(openai, docs, 'query', 2);
+      expect(results[0].id).toBe('1');
+      expect(results[1].id).toBe('2');
+    });
+  });
+
+  describe('loadDocs', () => {
+    it('loads docs from markdown and splits correctly', async () => {
+      const docs = await loadDocs();
+      expect(docs.length).toBeGreaterThan(0);
+      expect(docs[0]).toHaveProperty('id');
+      expect(docs[0]).toHaveProperty('text');
+    });
+    it('loads the fruits dataset correctly', async () => {
+      const docs = await loadDocs('example-fruits');
+      expect(docs.length).toBeGreaterThan(0);
+      const hasApple = docs.some(d => d.text.includes('Apple'));
+      expect(hasApple).toBe(true);
+    });
+
+    it('loads the fruits dataset correctly (alternative)', async () => {
+      const docs = await loadDocs('example-fruits');
+      expect(docs.length).toBeGreaterThan(0);
+      expect(docs[0]).toHaveProperty('id');
+      expect(docs[0]).toHaveProperty('text');
+      expect(docs[0].text.length).toBeGreaterThan(0);
+    });
+
+    it('loads the cars dataset correctly', async () => {
+      const docs = await loadDocs('example-cars');
+      expect(docs.length).toBeGreaterThan(0);
+      const hasV8 = docs.some(d => d.text.includes('V8'));
+      const hasElectric = docs.some(d => d.text.includes('electric')); 
+      expect(hasV8).toBe(true);
+      expect(hasElectric).toBe(true);
+    });
+  });
+});

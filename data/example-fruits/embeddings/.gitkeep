@@ -1,0 +1,2 @@
+# This directory stores cached embeddings for the example-fruits dataset.
+# Embeddings are stored as JSON files named by SHA256 content hash.

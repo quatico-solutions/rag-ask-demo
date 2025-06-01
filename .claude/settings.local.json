@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm add:*)",
+      "Bash(pnpm test:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(git mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(USE_MOCK_OPENAI=true pnpm embeddings:generate example-fruits)",
+      "Bash(pnpm embeddings:update:*)"
+    ],
+    "deny": []
+  }
+}

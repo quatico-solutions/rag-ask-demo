@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+tsconfig.tsbuildinfo
+
+# Local env files (except .env_example)
+*.env
+!.env_example
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+
+# IDE directories
+.vscode/
+
+# Test results
+test-results/
