@@ -22,7 +22,14 @@
       "Bash(ls:*)",
       "Bash(gh pr list:*)",
       "Bash(gh pr view:*)",
-      "Bash(gh pr edit:*)"
+      "Bash(gh pr edit:*)",
+      "Bash(pnpm cache:setup:*)",
+      "Bash(pnpm cache:list:*)",
+      "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(USE_MOCK_OPENAI=true AI_EMBEDDING_PROVIDER=openai AI_EMBEDDING_MODEL=text-embedding-ada-002 pnpm embeddings:generate example-fruits)",
+      "Bash(USE_MOCK_OPENAI=true AI_EMBEDDING_PROVIDER=openai AI_EMBEDDING_MODEL=text-embedding-ada-002 pnpm embeddings:clean example-fruits)",
+      "Bash(USE_MOCK_OPENAI=true AI_EMBEDDING_PROVIDER=openai AI_EMBEDDING_MODEL=text-embedding-ada-002 pnpm embeddings:update example-fruits)"
     ],
     "deny": []
   }
