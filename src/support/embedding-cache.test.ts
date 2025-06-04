@@ -4,9 +4,18 @@ import { writeFile, mkdir, rm, readFile } from 'node:fs/promises';
 import * as path from 'node:path';
 import * as os from 'node:os';
 
+// Mock the getAIConfig function
+jest.mock('../ai/provider-config', () => ({
+  getAIConfig: jest.fn(() => ({
+    embeddingProvider: 'openai',
+    embeddingModel: 'text-embedding-ada-002'
+  }))
+}));
+
 const testDataDir = path.join(os.tmpdir(), 'embedding-cache-test-' + Date.now());
 const testDataSet = 'test-dataset';
 const testEmbeddingsDir = path.join(testDataDir, 'data', testDataSet, 'embeddings');
+const testCacheDir = path.join(testEmbeddingsDir, 'openai', 'text-embedding-ada-002');
 
 // Mock OpenAI client
 const mockOpenAI = {
@@ -104,7 +113,7 @@ describe('EmbeddingCache', () => {
       expect(testDocs.every(doc => doc.embedding && doc.embedding.length === 1536)).toBe(true);
       
       // Verify cache files were created
-      const files = await import('node:fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
+      const files = await import('node:fs/promises').then(fs => fs.readdir(testCacheDir));
       expect(files.filter(f => f.endsWith('.json'))).toHaveLength(3);
     });
 
@@ -139,17 +148,24 @@ describe('EmbeddingCache', () => {
       
       await freshCache.embedDocuments(mockOpenAI, singleDoc, 'custom-model');
       
-      // Read the cache file directly
-      const files = await import('node:fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
+      // Read the cache file directly from the custom-model directory
+      const customCacheDir = path.join(testEmbeddingsDir, 'openai', 'custom-model');
+      const files = await import('node:fs/promises').then(fs => fs.readdir(customCacheDir));
       const cacheFile = files.find(f => f.endsWith('.json') && f.includes(
         require('node:crypto').createHash('sha256').update('Fresh test document for metadata test', 'utf8').digest('hex')
       ))!;
-      const cacheData = JSON.parse(await readFile(path.join(testEmbeddingsDir, cacheFile), 'utf-8'));
+      const cacheData = JSON.parse(await readFile(path.join(customCacheDir, cacheFile), 'utf-8'));
       
       expect(cacheData).toMatchObject({
         text: 'Fresh test document for metadata test',
         model: 'custom-model',
-        embedding: expect.any(Array)
+        provider: 'openai',
+        embedding: expect.any(Array),
+        cacheKey: {
+          model: 'custom-model',
+          provider: 'openai',
+          contentHash: expect.any(String)
+        }
       });
       expect(cacheData.contentHash).toMatch(/^[a-f0-9]{64}$/); // SHA256 hash
       expect(cacheData.createdAt).toMatch(/^\d{4}-\d{2}-\d{2}T/); // ISO timestamp
@@ -188,16 +204,16 @@ describe('EmbeddingCache', () => {
       await freshCache.embedDocuments(mockOpenAI, freshDocs);
       
       // Verify files exist
-      let files = await import('fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
+      let files = await import('fs/promises').then(fs => fs.readdir(testCacheDir));
       const initialJsonFiles = files.filter(f => f.endsWith('.json'));
       expect(initialJsonFiles.length).toBeGreaterThan(0);
       
       // Clear cache
       await freshCache.clearCache();
       
-      // Verify files are gone
-      files = await import('fs/promises').then(fs => fs.readdir(testEmbeddingsDir));
-      expect(files.filter(f => f.endsWith('.json'))).toHaveLength(0);
+      // Verify entire cache directory is gone
+      const { access } = await import('fs/promises');
+      await expect(access(testEmbeddingsDir)).rejects.toThrow();
     });
 
     test('handles non-existent cache directory gracefully', async () => {
