@@ -14,6 +14,7 @@
     "type-check": "tsc --noEmit",
     "test": "cross-env USE_MOCK_OPENAI=true AI_COMPLETION_PROVIDER=openai AI_COMPLETION_MODEL=gpt-3.5-turbo AI_EMBEDDING_PROVIDER=openai AI_EMBEDDING_MODEL=text-embedding-ada-002 OPENAI_API_KEY=test-key jest",
     "test:e2e": "playwright install && cross-env USE_MOCK_OPENAI=true AI_COMPLETION_PROVIDER=openai AI_COMPLETION_MODEL=gpt-3.5-turbo AI_EMBEDDING_PROVIDER=openai AI_EMBEDDING_MODEL=text-embedding-ada-002 OPENAI_API_KEY=test-key playwright test",
+    "prepare-embeddings": "cd data && for D in *; do echo \"Processing $D\"; pnpm run embeddings:update $D; done",
     "embeddings:generate": "node scripts/embeddings-generate.js",
     "embeddings:clean": "node scripts/embeddings-clean.js",
     "embeddings:update": "node scripts/embeddings-update.js",
