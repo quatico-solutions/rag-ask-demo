@@ -13,6 +13,7 @@ This application demonstrates a complete Retrieval-Augmented Generation (RAG) pi
 The demo implements semantic search using OpenAI's embedding and completion APIs, following the principles outlined in [OpenAI's Retrieval Guide](https://platform.openai.com/docs/guides/retrieval#semantic-search).
 
 **RAG Pipeline:**
+
 1. **Document Embedding**: All documents in a dataset are converted to embeddings using OpenAI's `text-embedding-ada-002` model
 2. **Query Processing**: User questions are embedded using the same model
 3. **Semantic Search**: The system finds the most relevant documents using cosine similarity between embeddings
@@ -20,6 +21,7 @@ The demo implements semantic search using OpenAI's embedding and completion APIs
 5. **AI Generation**: OpenAI's `gpt-3.5-turbo` generates responses based on the context and question
 
 **Key AI Components:**
+
 - **Embeddings**: Convert text to vector representations for semantic similarity
 - **Embedding Cache**: Automatically cache embeddings by content hash to avoid redundant API calls
 - **Semantic Search**: Find relevant documents without exact keyword matching
@@ -78,21 +80,27 @@ The system automatically caches embeddings to avoid redundant API calls and impr
 The project includes convenient scripts for managing cached embeddings:
 
 **Generate embeddings for a dataset:**
+
 ```bash
 pnpm embeddings:generate example-fruits
 ```
+
 Creates embedding cache files for all documents in the specified dataset. Requires `OPENAI_API_KEY` environment variable.
 
 **Clean unused cache files:**
+
 ```bash
 pnpm embeddings:clean example-fruits  
 ```
+
 Removes cache files that no longer correspond to current document content (useful after editing documents).
 
 **Update embeddings (generate + clean):**
+
 ```bash
 pnpm embeddings:update example-fruits
 ```
+
 Runs both generate and clean operations in sequence - the recommended way to refresh embeddings after making changes.
 
 ### Customizing Data Loading
@@ -126,11 +134,13 @@ export abstract class DocumentLoader {
 ```
 
 **To add your own dataset:**
+
 1. Create a new folder in `data/` with your dataset name
 2. Add the three required markdown files
 3. The system will automatically discover and load your dataset
 
 **To customize data loading:**
+
 1. Extend the `DocumentLoader` class in `src/dataset/DocumentLoader.ts`
 2. Implement your custom `loadDocuments()` method
 3. Update the semantic search to use your custom loader
@@ -145,6 +155,7 @@ The application uses **Hono.js** as a lightweight web framework:
 - **Static UI**: No JavaScript frontend - pure HTML forms and server responses
 
 **Request Flow:**
+
 1. User visits `/` and selects a dataset
 2. User submits question via HTML form
 3. Server processes question through RAG pipeline  
@@ -158,24 +169,28 @@ The UI is intentionally minimal to focus on the RAG functionality rather than fr
 The enhanced version (`pnpm dev:enhanced`) includes significant improvements for better retrieval quality:
 
 ### 1. **Intelligent Document Chunking**
+
 - **Automatic Chunking**: Large documents are automatically split into ~500 token chunks
 - **Sentence Preservation**: Chunks respect sentence boundaries for better readability
 - **Overlapping Context**: Chunks include overlapping content to preserve context
 - **Smart Threshold**: Only documents >1.5x chunk size are split (avoids unnecessary chunking)
 
 ### 2. **Hybrid Search**
+
 - **Dual Scoring**: Combines embedding similarity with keyword matching
 - **Better Precision**: Excellent for finding specific terms, error codes, or technical details
 - **Configurable Weights**: Adjust the balance between semantic and keyword search
 - **Keyword Highlighting**: Shows matching keywords in search results
 
 ### 3. **Enhanced Context Display**
+
 - **Chunk Metadata**: Shows which document and chunk each result comes from
 - **Score Transparency**: Displays relevance scores for each result
 - **Highlighted Excerpts**: Shows keyword matches in context
 - **Configurable Results**: Choose how many results to retrieve (1-10)
 
-### Example Improvements:
+### Example Improvements
+
 ```
 Query: "What is the API timeout?"
 
@@ -189,7 +204,7 @@ Enhanced RAG:
 - Shows relevance score and chunk location
 ```
 
-### Running the Enhanced Version:
+### Running the Enhanced Version
 
 ```bash
 # Development mode with hot-reloading
@@ -210,6 +225,22 @@ The enhanced server runs on the same port (8787) and is fully backwards compatib
 
 ## Running the App
 
+### Quickstart with LM Studio
+
+Download LM Studio and install the following models:
+
+- <https://lmstudio.ai>
+- <https://huggingface.co/NathanMad/sentence-transformers_all-MiniLM-L12-v2-gguf>
+- <https://huggingface.co/NathanMad/llama-2-13b-chat-gguf>
+
+```bash
+cp .env_example_lmstudio .env
+pnpm install
+pnpm run dev
+```
+
+### Full Setup with OpenAI or LM Studio
+
 1. **Install dependencies**
 
    ```sh
@@ -219,7 +250,7 @@ The enhanced server runs on the same port (8787) and is fully backwards compatib
 2. **Set your OpenAI API key**
 
    ```sh
-   cp .env_example .env
+   cp .env_example_openai .env
    ```
 
    Then edit `.env` and set your OpenAI API key:
@@ -241,23 +272,27 @@ The enhanced server runs on the same port (8787) and is fully backwards compatib
 ## Available Scripts
 
 ### Server Commands
+
 - `pnpm dev` - start development server (basic RAG)
 - `pnpm dev:enhanced` - start enhanced development server (with chunking and hybrid search)
 - `pnpm start` - run production server (basic RAG)
 - `pnpm start:enhanced` - run production enhanced server
 
 ### Development Commands
+
 - `pnpm type-check` - run TypeScript compiler in noEmit mode
 - `pnpm test` - run Jest tests
 - `pnpm test:e2e` - run Playwright end-to-end tests with mocked OpenAI responses
 - `pnpm ci` - run all checks (type-check, tests, e2e)
 
 ### Embedding Management
+
 - `pnpm embeddings:generate <dataset>` - generate cached embeddings for a dataset
 - `pnpm embeddings:clean <dataset>` - remove unused cached embeddings for a dataset  
 - `pnpm embeddings:update <dataset>` - generate new embeddings and clean unused ones
 
 ### Cache Management
+
 - `pnpm cache:list` - list all cached embeddings organized by provider and model
 - `pnpm cache:clear <dataset> [provider] [model]` - clear specific or all caches
 - `pnpm cache:setup <dataset>` - create directories for popular embedding models
