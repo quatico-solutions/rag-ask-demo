@@ -7,8 +7,8 @@ build/
 tsconfig.tsbuildinfo
 
 # Local env files (except .env_example)
-*.env
-!.env_example
+*.env*
+!.env_example*
 
 # Logs
 *.log
