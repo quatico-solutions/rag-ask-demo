@@ -5,6 +5,7 @@
     "node_modules/**/*",
     "dist/**/*",
     "build/**/*",
+    "**/embeddings/**/*.json",
     "test-results/**/*",
     ".git/**/*",
     "**/*.test.ts",
