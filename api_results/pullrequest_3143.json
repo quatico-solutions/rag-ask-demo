@@ -1,0 +1,223 @@
+{
+	"comment_count": 7,
+	"task_count": 0,
+	"type": "pullrequest",
+	"id": 3143,
+	"title": "F: build intro image caption from legend and source",
+	"description": "\\#feature/MCHW2C-4190",
+	"rendered": {
+		"title": {
+			"type": "rendered",
+			"raw": "F: build intro image caption from legend and source",
+			"markup": "markdown",
+			"html": "<p>F: build intro image caption from legend and source</p>"
+		},
+		"description": {
+			"type": "rendered",
+			"raw": "\\#feature/MCHW2C-4190",
+			"markup": "markdown",
+			"html": "<p>#feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4190\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4190</a></p>"
+		}
+	},
+	"state": "MERGED",
+	"draft": false,
+	"merge_commit": {
+		"hash": "659240846671",
+		"links": {
+			"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/659240846671" },
+			"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/659240846671" }
+		},
+		"type": "commit"
+	},
+	"close_source_branch": true,
+	"closed_by": {
+		"display_name": "Simon Harte",
+		"links": {
+			"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+			"avatar": {
+				"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+			},
+			"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+		},
+		"type": "user",
+		"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+		"account_id": "62974919e000550067e658e0",
+		"nickname": "Simon Harte"
+	},
+	"author": {
+		"display_name": "Simon Harte",
+		"links": {
+			"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+			"avatar": {
+				"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+			},
+			"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+		},
+		"type": "user",
+		"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+		"account_id": "62974919e000550067e658e0",
+		"nickname": "Simon Harte"
+	},
+	"reason": "",
+	"created_on": "2025-06-10T15:01:42.071833+00:00",
+	"updated_on": "2025-06-16T13:43:44.179631+00:00",
+	"destination": {
+		"branch": { "name": "develop" },
+		"commit": {
+			"hash": "f5ce6fada2b9",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/f5ce6fada2b9" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/f5ce6fada2b9" }
+			},
+			"type": "commit"
+		},
+		"repository": {
+			"type": "repository",
+			"full_name": "quatico/mchweb",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+				"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+			},
+			"name": "mchweb",
+			"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+		}
+	},
+	"source": {
+		"branch": { "name": "feature/MCHW2C-4190-source", "links": { }, "sync_strategies": ["merge_commit", "rebase"] },
+		"commit": {
+			"hash": "cbd360ed98cf",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/cbd360ed98cf" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/cbd360ed98cf" }
+			},
+			"type": "commit"
+		},
+		"repository": {
+			"type": "repository",
+			"full_name": "quatico/mchweb",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+				"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+			},
+			"name": "mchweb",
+			"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+		}
+	},
+	"reviewers": [
+		{
+			"display_name": "Max Albrecht",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+				"avatar": {
+					"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+				},
+				"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+			},
+			"type": "user",
+			"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+			"account_id": "639308415fc160544e1e49b2",
+			"nickname": "Max Albrecht"
+		},
+		{
+			"display_name": "Egemen Kaba",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/users/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D" },
+				"avatar": { "href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/initials/EK-2.png" },
+				"html": { "href": "https://bitbucket.org/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D/" }
+			},
+			"type": "user",
+			"uuid": "{92cd286d-9a10-428d-9ebf-ef3ea9399954}",
+			"account_id": "712020:51d84fd2-7daa-4e54-bc66-395b56d759b0",
+			"nickname": "Egemen Kaba"
+		}
+	],
+	"participants": [
+		{
+			"type": "participant",
+			"user": {
+				"display_name": "Egemen Kaba",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D" },
+					"avatar": { "href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/initials/EK-2.png" },
+					"html": { "href": "https://bitbucket.org/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D/" }
+				},
+				"type": "user",
+				"uuid": "{92cd286d-9a10-428d-9ebf-ef3ea9399954}",
+				"account_id": "712020:51d84fd2-7daa-4e54-bc66-395b56d759b0",
+				"nickname": "Egemen Kaba"
+			},
+			"role": "REVIEWER",
+			"approved": true,
+			"state": "approved",
+			"participated_on": "2025-06-11T09:32:15.452668+00:00"
+		},
+		{
+			"type": "participant",
+			"user": {
+				"display_name": "Max Albrecht",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+					"avatar": {
+						"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+					},
+					"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+				},
+				"type": "user",
+				"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+				"account_id": "639308415fc160544e1e49b2",
+				"nickname": "Max Albrecht"
+			},
+			"role": "REVIEWER",
+			"approved": false,
+			"state": null,
+			"participated_on": "2025-06-10T17:08:26.364939+00:00"
+		},
+		{
+			"type": "participant",
+			"user": {
+				"display_name": "Simon Harte",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+					"avatar": {
+						"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+					},
+					"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+				},
+				"type": "user",
+				"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+				"account_id": "62974919e000550067e658e0",
+				"nickname": "Simon Harte"
+			},
+			"role": "PARTICIPANT",
+			"approved": false,
+			"state": null,
+			"participated_on": "2025-06-11T09:36:05.187645+00:00"
+		}
+	],
+	"links": {
+		"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+		"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" },
+		"commits": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/commits" },
+		"approve": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/approve" },
+		"request-changes": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/request-changes" },
+		"diff": {
+			"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf%0Df5ce6fada2b9?from_pullrequest_id=3143&topic=true"
+		},
+		"diffstat": {
+			"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diffstat/quatico/mchweb:cbd360ed98cf%0Df5ce6fada2b9?from_pullrequest_id=3143&topic=true"
+		},
+		"comments": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments" },
+		"activity": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/activity" },
+		"merge": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/merge" },
+		"decline": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/decline" },
+		"statuses": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/statuses" }
+	},
+	"summary": {
+		"type": "rendered",
+		"raw": "\\#feature/MCHW2C-4190",
+		"markup": "markdown",
+		"html": "<p>#feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4190\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4190</a></p>"
+	}
+}

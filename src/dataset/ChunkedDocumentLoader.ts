@@ -1,7 +1,9 @@
-import { readFile } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import { stripFrontmatter } from '../view/frontmatter';
-import { DocumentLoader, type Doc } from './DocumentLoader';
-import { chunkDocument, shouldChunk, type Chunk, type ChunkOptions } from './document-chunker';
+import { type Doc, DocumentLoader } from './DocumentLoader';
+import { chunkDocument, type ChunkOptions, shouldChunk } from './document-chunker';
+import { extname, join } from 'node:path';
+import { existsSync } from 'node:fs';
 
 /**
  * Enhanced document loader that supports automatic chunking of large documents.
@@ -33,34 +35,27 @@ export class ChunkedDocumentLoader extends DocumentLoader {
     this.chunkOptions = chunkOptions;
   }
 
-  /**
-   * Load documents and automatically chunk large ones.
-   * Small documents are returned as-is for backwards compatibility.
-   * 
-   * @param dataSet - The dataset name
-   * @returns Array of documents (chunks for large docs, full docs for small ones)
-   */
-  async loadDocuments(dataSet: string): Promise<Doc[]> {
+  async loadDocumentsFromDocsMd(dataSet: string): Promise<Doc[]> {
     const data = await readFile(
       `${process.cwd()}/data/${dataSet}/docs.md`,
       'utf-8'
     );
     const content = stripFrontmatter(data);
-    
+
     // Split on markdown separator
     const blocks = content.split(/^\*{3}$/m).map(b => b.trim()).filter(Boolean);
-    
+
     const documents: Doc[] = [];
-    
+
     for (let idx = 0; idx < blocks.length; idx++) {
       const text = blocks[idx];
       const docId = (idx + 1).toString();
-      
+
       // Check if document should be chunked
       if (shouldChunk(text, this.chunkOptions.maxTokens)) {
         // Chunk large documents
         const chunks = chunkDocument(docId, text, this.chunkOptions);
-        
+
         // Convert chunks to Doc format
         chunks.forEach(chunk => {
           documents.push({
@@ -89,8 +84,75 @@ export class ChunkedDocumentLoader extends DocumentLoader {
         } as Doc & { metadata: any });
       }
     }
-    
+
     return documents;
+  }
+
+  /**
+   * Load documents and automatically chunk large ones.
+   * Small documents are returned as-is for backwards compatibility.
+   * 
+   * @param dataSet - The dataset name
+   * @returns Array of documents (chunks for large docs, full docs for small ones)
+   */
+  async loadDocuments(dataSet: string): Promise<Doc[]> {
+
+    const docsMdExists = existsSync(
+      `${process.cwd()}/data/${dataSet}/docs.md`
+    );
+
+    if (docsMdExists) {
+      return this.loadDocumentsFromDocsMd(dataSet);
+    }
+
+    const dataDir = `${process.cwd()}/data/${dataSet}/docs`;
+    const files = await readdir(dataDir);
+    const mdFiles = files.filter(file => extname(file).toLowerCase() === '.md' && file.startsWith('pr'));
+
+    return (await Promise.all(mdFiles.flatMap(async file => {
+      const filePath = join(dataDir, file);
+      const data = await readFile(filePath, 'utf-8');
+      const content = stripFrontmatter(data);
+
+      const documents: Doc[] = [];
+
+      const docId = "1";
+
+      // Check if document should be chunked
+      if (shouldChunk(content, this.chunkOptions.maxTokens)) {
+        // Chunk large documents
+        const chunks = chunkDocument(docId, content, this.chunkOptions);
+
+        // Convert chunks to Doc format
+        chunks.forEach(chunk => {
+          documents.push({
+            id: `${docId}-chunk-${chunk.chunkIndex}`,
+            text: chunk.text,
+            // Store chunk metadata in the doc for reference
+            metadata: {
+              documentId: chunk.documentId,
+              chunkIndex: chunk.chunkIndex,
+              totalChunks: chunk.totalChunks,
+              startOffset: chunk.startOffset,
+              endOffset: chunk.endOffset,
+              isChunk: true
+            }
+          } as Doc & { metadata: any });
+        });
+      } else {
+        // Keep small documents as single units
+        documents.push({
+          id: docId,
+          text: content,
+          metadata: {
+            documentId: docId,
+            isChunk: false
+          }
+        } as Doc & { metadata: any });
+      }
+
+      return documents;
+    }))).flatMap(doc => doc);
   }
 
   /**

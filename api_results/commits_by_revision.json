@@ -1,0 +1,2320 @@
+{
+	"values": [
+		{
+			"type": "commit",
+			"hash": "15a1409476093a830e98f5f388db157390a51312",
+			"date": "2025-04-19T18:06:30+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in ship-release-3.23.0 (pull request #2994)\n\nship release 3.23.0\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in ship-release-3.23.0 (pull request #2994)\n\nship release 3.23.0\n",
+				"markup": "markdown",
+				"html": "<p>Merged in ship-release-3.23.0 (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2994\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2994</a>)</p>\n<p>ship release 3.23.0</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/15a1409476093a830e98f5f388db157390a51312" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/15a1409476093a830e98f5f388db157390a51312" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/15a1409476093a830e98f5f388db157390a51312" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/15a1409476093a830e98f5f388db157390a51312/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/15a1409476093a830e98f5f388db157390a51312/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/15a1409476093a830e98f5f388db157390a51312/statuses"
+				}
+			},
+			"parents": [
+				{
+					"hash": "c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f" }
+					},
+					"type": "commit"
+				},
+				{
+					"hash": "6ba5aad6f80fe6e75184f239fa59e9d8e1be932c",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in ship-release-3.23.0 (pull request #2994)\n\nship release 3.23.0\n",
+					"markup": "markdown",
+					"html": "<p>Merged in ship-release-3.23.0 (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2994\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2994</a>)</p>\n<p>ship release 3.23.0</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "6ba5aad6f80fe6e75184f239fa59e9d8e1be932c",
+			"date": "2025-04-19T17:49:25+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in MCHW2C-4198-climate-monitor-calculated-value (pull request #2993)\n\nMCHW2C-4198 climate monitor calculated value\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in MCHW2C-4198-climate-monitor-calculated-value (pull request #2993)\n\nMCHW2C-4198 climate monitor calculated value\n",
+				"markup": "markdown",
+				"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4198\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4198</a>-climate-monitor-calculated-value (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2993\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2993</a>)</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4198\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4198</a> climate monitor calculated value</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/6ba5aad6f80fe6e75184f239fa59e9d8e1be932c" }
+			},
+			"parents": [
+				{
+					"hash": "3076c9fa7dd5d9899cccfc2364dd7a79f056228c",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3076c9fa7dd5d9899cccfc2364dd7a79f056228c"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3076c9fa7dd5d9899cccfc2364dd7a79f056228c" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in MCHW2C-4198-climate-monitor-calculated-value (pull request #2993)\n\nMCHW2C-4198 climate monitor calculated value\n",
+					"markup": "markdown",
+					"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4198\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4198</a>-climate-monitor-calculated-value (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2993\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2993</a>)</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4198\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4198</a> climate monitor calculated value</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "3076c9fa7dd5d9899cccfc2364dd7a79f056228c",
+			"date": "2025-04-19T17:39:20+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in MCHW2C-4108-clima-monitor-texts (pull request #2992)\n\nMCHW2C-4108 clima monitor texts\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in MCHW2C-4108-clima-monitor-texts (pull request #2992)\n\nMCHW2C-4108 clima monitor texts\n",
+				"markup": "markdown",
+				"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4108\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4108</a>-clima-monitor-texts (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2992\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2992</a>)</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4108\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4108</a> clima monitor texts</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3076c9fa7dd5d9899cccfc2364dd7a79f056228c" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3076c9fa7dd5d9899cccfc2364dd7a79f056228c" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/3076c9fa7dd5d9899cccfc2364dd7a79f056228c" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3076c9fa7dd5d9899cccfc2364dd7a79f056228c/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3076c9fa7dd5d9899cccfc2364dd7a79f056228c/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3076c9fa7dd5d9899cccfc2364dd7a79f056228c/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/3076c9fa7dd5d9899cccfc2364dd7a79f056228c" }
+			},
+			"parents": [
+				{
+					"hash": "c53f7561509785fd5f98d5316fb241c9c4b2fb9e",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c53f7561509785fd5f98d5316fb241c9c4b2fb9e"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/c53f7561509785fd5f98d5316fb241c9c4b2fb9e" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in MCHW2C-4108-clima-monitor-texts (pull request #2992)\n\nMCHW2C-4108 clima monitor texts\n",
+					"markup": "markdown",
+					"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4108\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4108</a>-clima-monitor-texts (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2992\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2992</a>)</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4108\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4108</a> clima monitor texts</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "c53f7561509785fd5f98d5316fb241c9c4b2fb9e",
+			"date": "2025-04-19T17:39:03+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in MCHW2C-4176-remove-some-airfields (pull request #2991)\n\nF remove some airfields from LakesAndAirfields map\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in MCHW2C-4176-remove-some-airfields (pull request #2991)\n\nF remove some airfields from LakesAndAirfields map\n",
+				"markup": "markdown",
+				"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4176\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4176</a>-remove-some-airfields (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2991\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2991</a>)</p>\n<p>F remove some airfields from LakesAndAirfields map</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c53f7561509785fd5f98d5316fb241c9c4b2fb9e" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/c53f7561509785fd5f98d5316fb241c9c4b2fb9e" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/c53f7561509785fd5f98d5316fb241c9c4b2fb9e" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c53f7561509785fd5f98d5316fb241c9c4b2fb9e/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c53f7561509785fd5f98d5316fb241c9c4b2fb9e/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c53f7561509785fd5f98d5316fb241c9c4b2fb9e/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/c53f7561509785fd5f98d5316fb241c9c4b2fb9e" }
+			},
+			"parents": [
+				{
+					"hash": "8a2d48527b81902cc880817c822700b46ebe2428",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/8a2d48527b81902cc880817c822700b46ebe2428"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/8a2d48527b81902cc880817c822700b46ebe2428" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in MCHW2C-4176-remove-some-airfields (pull request #2991)\n\nF remove some airfields from LakesAndAirfields map\n",
+					"markup": "markdown",
+					"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4176\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4176</a>-remove-some-airfields (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2991\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2991</a>)</p>\n<p>F remove some airfields from LakesAndAirfields map</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f",
+			"date": "2025-04-19T12:10:17+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in release/MCHW2C-4083-hydroregionen (pull request #2776)\n\nNeue Hydroregionen\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in release/MCHW2C-4083-hydroregionen (pull request #2776)\n\nNeue Hydroregionen\n",
+				"markup": "markdown",
+				"html": "<p>Merged in release/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a>-hydroregionen (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2776\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2776</a>)</p>\n<p>Neue Hydroregionen</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c7fc36bbcc9fe4b722ba79bdf82a60df7bb6c03f/statuses"
+				}
+			},
+			"parents": [
+				{
+					"hash": "8a2d48527b81902cc880817c822700b46ebe2428",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/8a2d48527b81902cc880817c822700b46ebe2428"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/8a2d48527b81902cc880817c822700b46ebe2428" }
+					},
+					"type": "commit"
+				},
+				{
+					"hash": "7750d61f3c75e78cb0fa8a9c751a3f8a9802286f",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in release/MCHW2C-4083-hydroregionen (pull request #2776)\n\nNeue Hydroregionen\n",
+					"markup": "markdown",
+					"html": "<p>Merged in release/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a>-hydroregionen (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2776\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2776</a>)</p>\n<p>Neue Hydroregionen</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "7750d61f3c75e78cb0fa8a9c751a3f8a9802286f",
+			"date": "2025-04-19T11:54:05+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>a use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/7750d61f3c75e78cb0fa8a9c751a3f8a9802286f" }
+			},
+			"parents": [
+				{
+					"hash": "16978868537e687fc7bb57282aabc80714354986",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/16978868537e687fc7bb57282aabc80714354986"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/16978868537e687fc7bb57282aabc80714354986" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>a use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "16978868537e687fc7bb57282aabc80714354986",
+			"date": "2025-04-19T11:48:34+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a use new HydroRegion Ids in dangers testdata\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a use new HydroRegion Ids in dangers testdata\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>a use new HydroRegion Ids in dangers testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/16978868537e687fc7bb57282aabc80714354986" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/16978868537e687fc7bb57282aabc80714354986" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/16978868537e687fc7bb57282aabc80714354986" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/16978868537e687fc7bb57282aabc80714354986/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/16978868537e687fc7bb57282aabc80714354986/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/16978868537e687fc7bb57282aabc80714354986/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/16978868537e687fc7bb57282aabc80714354986" }
+			},
+			"parents": [
+				{
+					"hash": "b327defe3f1ee477aea72f2f18874f2c90e9f3d4",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b327defe3f1ee477aea72f2f18874f2c90e9f3d4"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/b327defe3f1ee477aea72f2f18874f2c90e9f3d4" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a use new HydroRegion Ids in dangers testdata\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>a use new HydroRegion Ids in dangers testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "b327defe3f1ee477aea72f2f18874f2c90e9f3d4",
+			"date": "2025-04-19T11:31:31+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>a use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b327defe3f1ee477aea72f2f18874f2c90e9f3d4" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/b327defe3f1ee477aea72f2f18874f2c90e9f3d4" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/b327defe3f1ee477aea72f2f18874f2c90e9f3d4" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b327defe3f1ee477aea72f2f18874f2c90e9f3d4/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b327defe3f1ee477aea72f2f18874f2c90e9f3d4/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b327defe3f1ee477aea72f2f18874f2c90e9f3d4/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/b327defe3f1ee477aea72f2f18874f2c90e9f3d4" }
+			},
+			"parents": [
+				{
+					"hash": "d294def5f4bb1e03ad46c52a07fc026d44a92e21",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d294def5f4bb1e03ad46c52a07fc026d44a92e21"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/d294def5f4bb1e03ad46c52a07fc026d44a92e21" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>a use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "d294def5f4bb1e03ad46c52a07fc026d44a92e21",
+			"date": "2025-04-19T11:23:47+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>a use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d294def5f4bb1e03ad46c52a07fc026d44a92e21" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/d294def5f4bb1e03ad46c52a07fc026d44a92e21" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/d294def5f4bb1e03ad46c52a07fc026d44a92e21" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d294def5f4bb1e03ad46c52a07fc026d44a92e21/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d294def5f4bb1e03ad46c52a07fc026d44a92e21/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d294def5f4bb1e03ad46c52a07fc026d44a92e21/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/d294def5f4bb1e03ad46c52a07fc026d44a92e21" }
+			},
+			"parents": [
+				{
+					"hash": "558e4bcafdf3c60ac994dfc6a7ad758390e4e010",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/558e4bcafdf3c60ac994dfc6a7ad758390e4e010"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/558e4bcafdf3c60ac994dfc6a7ad758390e4e010" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>a use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "558e4bcafdf3c60ac994dfc6a7ad758390e4e010",
+			"date": "2025-04-19T11:23:47+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a use new HydroRegion Ids in MCH localForecast testdata\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a use new HydroRegion Ids in MCH localForecast testdata\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>a use new HydroRegion Ids in MCH localForecast testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/558e4bcafdf3c60ac994dfc6a7ad758390e4e010" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/558e4bcafdf3c60ac994dfc6a7ad758390e4e010" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/558e4bcafdf3c60ac994dfc6a7ad758390e4e010" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/558e4bcafdf3c60ac994dfc6a7ad758390e4e010/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/558e4bcafdf3c60ac994dfc6a7ad758390e4e010/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/558e4bcafdf3c60ac994dfc6a7ad758390e4e010/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/558e4bcafdf3c60ac994dfc6a7ad758390e4e010" }
+			},
+			"parents": [
+				{
+					"hash": "4b4c42e7edf029088086bee8a7067c1eb6762f0f",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/4b4c42e7edf029088086bee8a7067c1eb6762f0f"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/4b4c42e7edf029088086bee8a7067c1eb6762f0f" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a use new HydroRegion Ids in MCH localForecast testdata\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>a use new HydroRegion Ids in MCH localForecast testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "4b4c42e7edf029088086bee8a7067c1eb6762f0f",
+			"date": "2025-04-19T11:23:47+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a format MCH localForecast testdata\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a format MCH localForecast testdata\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>a format MCH localForecast testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/4b4c42e7edf029088086bee8a7067c1eb6762f0f" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/4b4c42e7edf029088086bee8a7067c1eb6762f0f" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/4b4c42e7edf029088086bee8a7067c1eb6762f0f" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/4b4c42e7edf029088086bee8a7067c1eb6762f0f/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/4b4c42e7edf029088086bee8a7067c1eb6762f0f/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/4b4c42e7edf029088086bee8a7067c1eb6762f0f/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/4b4c42e7edf029088086bee8a7067c1eb6762f0f" }
+			},
+			"parents": [
+				{
+					"hash": "c25d26c2f9271f1593eea8adc96a4fb580fb6a8b",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a format MCH localForecast testdata\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>a format MCH localForecast testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "c25d26c2f9271f1593eea8adc96a4fb580fb6a8b",
+			"date": "2025-04-19T11:23:42+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "F use new HydroRegion Ids in NGP locations JSON\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "F use new HydroRegion Ids in NGP locations JSON\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>F use new HydroRegion Ids in NGP locations JSON</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/c25d26c2f9271f1593eea8adc96a4fb580fb6a8b" }
+			},
+			"parents": [
+				{
+					"hash": "11404505c76762e25b675497b77e58de4bc90496",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/11404505c76762e25b675497b77e58de4bc90496"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/11404505c76762e25b675497b77e58de4bc90496" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "F use new HydroRegion Ids in NGP locations JSON\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>F use new HydroRegion Ids in NGP locations JSON</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "11404505c76762e25b675497b77e58de4bc90496",
+			"date": "2025-04-19T11:16:51+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a format NGP locations JSON\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a format NGP locations JSON\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>a format NGP locations JSON</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/11404505c76762e25b675497b77e58de4bc90496" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/11404505c76762e25b675497b77e58de4bc90496" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/11404505c76762e25b675497b77e58de4bc90496" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/11404505c76762e25b675497b77e58de4bc90496/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/11404505c76762e25b675497b77e58de4bc90496/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/11404505c76762e25b675497b77e58de4bc90496/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/11404505c76762e25b675497b77e58de4bc90496" }
+			},
+			"parents": [
+				{
+					"hash": "82c2c702bd19f5b8b242db206c0dcf7a5bdd0764",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a format NGP locations JSON\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>a format NGP locations JSON</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "82c2c702bd19f5b8b242db206c0dcf7a5bdd0764",
+			"date": "2025-04-19T10:57:05+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "T use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "T use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+				"markup": "markdown",
+				"html": "<p>T use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/82c2c702bd19f5b8b242db206c0dcf7a5bdd0764" }
+			},
+			"parents": [
+				{
+					"hash": "09ff6d47719fc93446acea775e68d03ee3aa1114",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/09ff6d47719fc93446acea775e68d03ee3aa1114"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/09ff6d47719fc93446acea775e68d03ee3aa1114" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "T use new HydroRegion Ids in testdata\n\nMCHW2C-4083\n",
+					"markup": "markdown",
+					"html": "<p>T use new HydroRegion Ids in testdata</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "09ff6d47719fc93446acea775e68d03ee3aa1114",
+			"date": "2025-04-19T10:46:08+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merge branch 'ship-release-3.23.0' into release/MCHW2C-4083-hydroregionen\n\n* origin/ship-release-3.23.0: (789 commits)\n  e: Start development of release 3.23.0\n  a fix linting issues\n  E update tomcat image to version 2.0.2\n  d updates tomcat image README\n  F NGP DangerMap with \"fullsize\" map\n  e update @mchweb/map to version 3.1.0\n  r combine selectors in danger-map-component scss\n  f: height restriction only in LG+\n  F: restrict ngp map composition to desired pixel range\n  F adjust DangerMap height calcuations for search\n  r fix linting issues\n  r name css var to match usage scope\n  F! NgpDangerMap: set fixed legend width\n  F! Ngp Homepage contain height of danger-map section by min/max/viewport height\n  F Ngp Homepage scroll to situation section when title is clicked\n  a extract BottomSheetDemo from NgpDangerMap\n  T: update DangerRegionLegend test data\n  R: simplify start date getter\n  B: resolve stylelint issues\n  R! use date-fn helpers in DangerTimeline\n  ...\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merge branch 'ship-release-3.23.0' into release/MCHW2C-4083-hydroregionen\n\n* origin/ship-release-3.23.0: (789 commits)\n  e: Start development of release 3.23.0\n  a fix linting issues\n  E update tomcat image to version 2.0.2\n  d updates tomcat image README\n  F NGP DangerMap with \"fullsize\" map\n  e update @mchweb/map to version 3.1.0\n  r combine selectors in danger-map-component scss\n  f: height restriction only in LG+\n  F: restrict ngp map composition to desired pixel range\n  F adjust DangerMap height calcuations for search\n  r fix linting issues\n  r name css var to match usage scope\n  F! NgpDangerMap: set fixed legend width\n  F! Ngp Homepage contain height of danger-map section by min/max/viewport height\n  F Ngp Homepage scroll to situation section when title is clicked\n  a extract BottomSheetDemo from NgpDangerMap\n  T: update DangerRegionLegend test data\n  R: simplify start date getter\n  B: resolve stylelint issues\n  R! use date-fn helpers in DangerTimeline\n  ...\n",
+				"markup": "markdown",
+				"html": "<p>Merge branch 'ship-release-3.23.0' into release/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a>-hydroregionen</p>\n<ul>\n<li>origin/ship-release-3.23.0: (789 commits)<br>\n  e: Start development of release 3.23.0<br>\n  a fix linting issues<br>\n  E update tomcat image to version 2.0.2<br>\n  d updates tomcat image README<br>\n  F NGP DangerMap with \"fullsize\" map<br>\n  e update @mchweb/map to version 3.1.0<br>\n  r combine selectors in danger-map-component scss<br>\n  f: height restriction only in LG+<br>\n  F: restrict ngp map composition to desired pixel range<br>\n  F adjust DangerMap height calcuations for search<br>\n  r fix linting issues<br>\n  r name css var to match usage scope<br>\n  F! NgpDangerMap: set fixed legend width<br>\n  F! Ngp Homepage contain height of danger-map section by min/max/viewport height<br>\n  F Ngp Homepage scroll to situation section when title is clicked<br>\n  a extract BottomSheetDemo from NgpDangerMap<br>\n  T: update DangerRegionLegend test data<br>\n  R: simplify start date getter<br>\n  B: resolve stylelint issues<br>\n  R! use date-fn helpers in DangerTimeline<br>\n  ...</li>\n</ul>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/09ff6d47719fc93446acea775e68d03ee3aa1114" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/09ff6d47719fc93446acea775e68d03ee3aa1114" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/09ff6d47719fc93446acea775e68d03ee3aa1114" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/09ff6d47719fc93446acea775e68d03ee3aa1114/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/09ff6d47719fc93446acea775e68d03ee3aa1114/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/09ff6d47719fc93446acea775e68d03ee3aa1114/statuses"
+				}
+			},
+			"parents": [
+				{
+					"hash": "2f97bad1deab341edded1be160377534688a4ea5",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/2f97bad1deab341edded1be160377534688a4ea5"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/2f97bad1deab341edded1be160377534688a4ea5" }
+					},
+					"type": "commit"
+				},
+				{
+					"hash": "6f0563d42253b410703c60b31ac34d7c6cec2169",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6f0563d42253b410703c60b31ac34d7c6cec2169"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/6f0563d42253b410703c60b31ac34d7c6cec2169" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merge branch 'ship-release-3.23.0' into release/MCHW2C-4083-hydroregionen\n\n* origin/ship-release-3.23.0: (789 commits)\n  e: Start development of release 3.23.0\n  a fix linting issues\n  E update tomcat image to version 2.0.2\n  d updates tomcat image README\n  F NGP DangerMap with \"fullsize\" map\n  e update @mchweb/map to version 3.1.0\n  r combine selectors in danger-map-component scss\n  f: height restriction only in LG+\n  F: restrict ngp map composition to desired pixel range\n  F adjust DangerMap height calcuations for search\n  r fix linting issues\n  r name css var to match usage scope\n  F! NgpDangerMap: set fixed legend width\n  F! Ngp Homepage contain height of danger-map section by min/max/viewport height\n  F Ngp Homepage scroll to situation section when title is clicked\n  a extract BottomSheetDemo from NgpDangerMap\n  T: update DangerRegionLegend test data\n  R: simplify start date getter\n  B: resolve stylelint issues\n  R! use date-fn helpers in DangerTimeline\n  ...\n",
+					"markup": "markdown",
+					"html": "<p>Merge branch 'ship-release-3.23.0' into release/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4083\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4083</a>-hydroregionen</p>\n<ul>\n<li>origin/ship-release-3.23.0: (789 commits)<br>\n  e: Start development of release 3.23.0<br>\n  a fix linting issues<br>\n  E update tomcat image to version 2.0.2<br>\n  d updates tomcat image README<br>\n  F NGP DangerMap with \"fullsize\" map<br>\n  e update @mchweb/map to version 3.1.0<br>\n  r combine selectors in danger-map-component scss<br>\n  f: height restriction only in LG+<br>\n  F: restrict ngp map composition to desired pixel range<br>\n  F adjust DangerMap height calcuations for search<br>\n  r fix linting issues<br>\n  r name css var to match usage scope<br>\n  F! NgpDangerMap: set fixed legend width<br>\n  F! Ngp Homepage contain height of danger-map section by min/max/viewport height<br>\n  F Ngp Homepage scroll to situation section when title is clicked<br>\n  a extract BottomSheetDemo from NgpDangerMap<br>\n  T: update DangerRegionLegend test data<br>\n  R: simplify start date getter<br>\n  B: resolve stylelint issues<br>\n  R! use date-fn helpers in DangerTimeline<br>\n  ...</li>\n</ul>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "6f0563d42253b410703c60b31ac34d7c6cec2169",
+			"date": "2025-04-19T10:39:15+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "e: Start development of release 3.23.0\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "e: Start development of release 3.23.0\n",
+				"markup": "markdown",
+				"html": "<p>e: Start development of release 3.23.0</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6f0563d42253b410703c60b31ac34d7c6cec2169" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/6f0563d42253b410703c60b31ac34d7c6cec2169" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/6f0563d42253b410703c60b31ac34d7c6cec2169" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6f0563d42253b410703c60b31ac34d7c6cec2169/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6f0563d42253b410703c60b31ac34d7c6cec2169/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6f0563d42253b410703c60b31ac34d7c6cec2169/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/6f0563d42253b410703c60b31ac34d7c6cec2169" }
+			},
+			"parents": [
+				{
+					"hash": "8a2d48527b81902cc880817c822700b46ebe2428",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/8a2d48527b81902cc880817c822700b46ebe2428"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/8a2d48527b81902cc880817c822700b46ebe2428" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "e: Start development of release 3.23.0\n",
+					"markup": "markdown",
+					"html": "<p>e: Start development of release 3.23.0</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "8a2d48527b81902cc880817c822700b46ebe2428",
+			"date": "2025-04-04T13:57:28+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in feature/LNTNGP24-244 (pull request #2928)\n\nFeature/LNTNGP24-244\n\nApproved-by: Ralph Bänziger\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in feature/LNTNGP24-244 (pull request #2928)\n\nFeature/LNTNGP24-244\n\nApproved-by: Ralph Bänziger\n",
+				"markup": "markdown",
+				"html": "<p>Merged in feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a> (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2928\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2928</a>)</p>\n<p>Feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>\n<p>Approved-by: Ralph Bänziger</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/8a2d48527b81902cc880817c822700b46ebe2428" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/8a2d48527b81902cc880817c822700b46ebe2428" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/8a2d48527b81902cc880817c822700b46ebe2428" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/8a2d48527b81902cc880817c822700b46ebe2428/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/8a2d48527b81902cc880817c822700b46ebe2428/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/8a2d48527b81902cc880817c822700b46ebe2428/statuses"
+				}
+			},
+			"parents": [
+				{
+					"hash": "5a2240546629e8ff5ec9d55e212e57394bc0a552",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/5a2240546629e8ff5ec9d55e212e57394bc0a552"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/5a2240546629e8ff5ec9d55e212e57394bc0a552" }
+					},
+					"type": "commit"
+				},
+				{
+					"hash": "a8ff06e279cd71fd022183530a6f18af5df4b42a",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a8ff06e279cd71fd022183530a6f18af5df4b42a"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/a8ff06e279cd71fd022183530a6f18af5df4b42a" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in feature/LNTNGP24-244 (pull request #2928)\n\nFeature/LNTNGP24-244\n\nApproved-by: Ralph Bänziger\n",
+					"markup": "markdown",
+					"html": "<p>Merged in feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a> (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2928\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2928</a>)</p>\n<p>Feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>\n<p>Approved-by: Ralph Bänziger</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "5a2240546629e8ff5ec9d55e212e57394bc0a552",
+			"date": "2025-04-04T13:48:53+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in update-tomcat (pull request #2929)\n\nUpdate tomcat\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in update-tomcat (pull request #2929)\n\nUpdate tomcat\n",
+				"markup": "markdown",
+				"html": "<p>Merged in update-tomcat (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2929\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2929</a>)</p>\n<p>Update tomcat</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/5a2240546629e8ff5ec9d55e212e57394bc0a552" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/5a2240546629e8ff5ec9d55e212e57394bc0a552" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/5a2240546629e8ff5ec9d55e212e57394bc0a552" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/5a2240546629e8ff5ec9d55e212e57394bc0a552/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/5a2240546629e8ff5ec9d55e212e57394bc0a552/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/5a2240546629e8ff5ec9d55e212e57394bc0a552/statuses"
+				}
+			},
+			"parents": [
+				{
+					"hash": "3e9c3bc45f612126cff43197cba98b90e965caef",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3e9c3bc45f612126cff43197cba98b90e965caef"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3e9c3bc45f612126cff43197cba98b90e965caef" }
+					},
+					"type": "commit"
+				},
+				{
+					"hash": "d478d13dfb9280499aaa36e369adfd4cbedf7a3b",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d478d13dfb9280499aaa36e369adfd4cbedf7a3b"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/d478d13dfb9280499aaa36e369adfd4cbedf7a3b" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in update-tomcat (pull request #2929)\n\nUpdate tomcat\n",
+					"markup": "markdown",
+					"html": "<p>Merged in update-tomcat (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2929\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2929</a>)</p>\n<p>Update tomcat</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "a8ff06e279cd71fd022183530a6f18af5df4b42a",
+			"date": "2025-04-04T13:15:15+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "a fix linting issues\n\nLNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "a fix linting issues\n\nLNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>a fix linting issues</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a8ff06e279cd71fd022183530a6f18af5df4b42a" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/a8ff06e279cd71fd022183530a6f18af5df4b42a" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/a8ff06e279cd71fd022183530a6f18af5df4b42a" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a8ff06e279cd71fd022183530a6f18af5df4b42a/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a8ff06e279cd71fd022183530a6f18af5df4b42a/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a8ff06e279cd71fd022183530a6f18af5df4b42a/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/a8ff06e279cd71fd022183530a6f18af5df4b42a" }
+			},
+			"parents": [
+				{
+					"hash": "58f67160a890a9f54e08331717b24c4993133618",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/58f67160a890a9f54e08331717b24c4993133618"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/58f67160a890a9f54e08331717b24c4993133618" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "a fix linting issues\n\nLNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>a fix linting issues</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "d478d13dfb9280499aaa36e369adfd4cbedf7a3b",
+			"date": "2025-04-04T13:12:55+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "E update tomcat image to version 2.0.2\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "E update tomcat image to version 2.0.2\n",
+				"markup": "markdown",
+				"html": "<p>E update tomcat image to version 2.0.2</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d478d13dfb9280499aaa36e369adfd4cbedf7a3b" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/d478d13dfb9280499aaa36e369adfd4cbedf7a3b" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/d478d13dfb9280499aaa36e369adfd4cbedf7a3b" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d478d13dfb9280499aaa36e369adfd4cbedf7a3b/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d478d13dfb9280499aaa36e369adfd4cbedf7a3b/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/d478d13dfb9280499aaa36e369adfd4cbedf7a3b/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/d478d13dfb9280499aaa36e369adfd4cbedf7a3b" }
+			},
+			"parents": [
+				{
+					"hash": "a4cc8d54386890576a846d771085d28f08dd4f1c",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a4cc8d54386890576a846d771085d28f08dd4f1c"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/a4cc8d54386890576a846d771085d28f08dd4f1c" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "E update tomcat image to version 2.0.2\n",
+					"markup": "markdown",
+					"html": "<p>E update tomcat image to version 2.0.2</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "a4cc8d54386890576a846d771085d28f08dd4f1c",
+			"date": "2025-04-04T13:12:55+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "d updates tomcat image README\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "d updates tomcat image README\n",
+				"markup": "markdown",
+				"html": "<p>d updates tomcat image README</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a4cc8d54386890576a846d771085d28f08dd4f1c" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/a4cc8d54386890576a846d771085d28f08dd4f1c" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/a4cc8d54386890576a846d771085d28f08dd4f1c" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a4cc8d54386890576a846d771085d28f08dd4f1c/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a4cc8d54386890576a846d771085d28f08dd4f1c/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/a4cc8d54386890576a846d771085d28f08dd4f1c/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/a4cc8d54386890576a846d771085d28f08dd4f1c" }
+			},
+			"parents": [
+				{
+					"hash": "3e9c3bc45f612126cff43197cba98b90e965caef",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3e9c3bc45f612126cff43197cba98b90e965caef"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3e9c3bc45f612126cff43197cba98b90e965caef" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "d updates tomcat image README\n",
+					"markup": "markdown",
+					"html": "<p>d updates tomcat image README</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "58f67160a890a9f54e08331717b24c4993133618",
+			"date": "2025-04-04T12:43:21+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "F NGP DangerMap with \"fullsize\" map\n\nLNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "F NGP DangerMap with \"fullsize\" map\n\nLNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>F NGP DangerMap with \"fullsize\" map</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/58f67160a890a9f54e08331717b24c4993133618" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/58f67160a890a9f54e08331717b24c4993133618" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/58f67160a890a9f54e08331717b24c4993133618" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/58f67160a890a9f54e08331717b24c4993133618/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/58f67160a890a9f54e08331717b24c4993133618/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/58f67160a890a9f54e08331717b24c4993133618/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/58f67160a890a9f54e08331717b24c4993133618" }
+			},
+			"parents": [
+				{
+					"hash": "9bab5fe0cee9180452963f873d87a1f22a6b4a13",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/9bab5fe0cee9180452963f873d87a1f22a6b4a13"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/9bab5fe0cee9180452963f873d87a1f22a6b4a13" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "F NGP DangerMap with \"fullsize\" map\n\nLNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>F NGP DangerMap with \"fullsize\" map</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "9bab5fe0cee9180452963f873d87a1f22a6b4a13",
+			"date": "2025-04-04T12:43:21+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "e update @mchweb/map to version 3.1.0\n\nLNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "e update @mchweb/map to version 3.1.0\n\nLNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>e update @mchweb/map to version 3.1.0</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/9bab5fe0cee9180452963f873d87a1f22a6b4a13" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/9bab5fe0cee9180452963f873d87a1f22a6b4a13" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/9bab5fe0cee9180452963f873d87a1f22a6b4a13" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/9bab5fe0cee9180452963f873d87a1f22a6b4a13/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/9bab5fe0cee9180452963f873d87a1f22a6b4a13/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/9bab5fe0cee9180452963f873d87a1f22a6b4a13/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/9bab5fe0cee9180452963f873d87a1f22a6b4a13" }
+			},
+			"parents": [
+				{
+					"hash": "6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "e update @mchweb/map to version 3.1.0\n\nLNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>e update @mchweb/map to version 3.1.0</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272",
+			"date": "2025-04-04T12:43:21+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "r combine selectors in danger-map-component scss\n\nLNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "r combine selectors in danger-map-component scss\n\nLNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>r combine selectors in danger-map-component scss</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/6b2870cd4f9bf8eff941a3bf3ccca0ebb0067272" }
+			},
+			"parents": [
+				{
+					"hash": "3e9c3bc45f612126cff43197cba98b90e965caef",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3e9c3bc45f612126cff43197cba98b90e965caef"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3e9c3bc45f612126cff43197cba98b90e965caef" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "r combine selectors in danger-map-component scss\n\nLNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>r combine selectors in danger-map-component scss</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "3e9c3bc45f612126cff43197cba98b90e965caef",
+			"date": "2025-04-04T07:50:49+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Simon Harte <simon.harte@quatico.com>",
+				"user": {
+					"display_name": "Simon Harte",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+						"avatar": {
+							"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+						},
+						"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+					},
+					"type": "user",
+					"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+					"account_id": "62974919e000550067e658e0",
+					"nickname": "Simon Harte"
+				}
+			},
+			"message": "Merged in feature/LNTNGP24-244 (pull request #2927)\n\nF: restrict ngp map composition to desired pixel range\n\nApproved-by: Max Albrecht\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in feature/LNTNGP24-244 (pull request #2927)\n\nF: restrict ngp map composition to desired pixel range\n\nApproved-by: Max Albrecht\n",
+				"markup": "markdown",
+				"html": "<p>Merged in feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a> (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2927\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2927</a>)</p>\n<p>F: restrict ngp map composition to desired pixel range</p>\n<p>Approved-by: Max Albrecht</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3e9c3bc45f612126cff43197cba98b90e965caef" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3e9c3bc45f612126cff43197cba98b90e965caef" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/3e9c3bc45f612126cff43197cba98b90e965caef" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3e9c3bc45f612126cff43197cba98b90e965caef/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3e9c3bc45f612126cff43197cba98b90e965caef/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3e9c3bc45f612126cff43197cba98b90e965caef/statuses"
+				}
+			},
+			"parents": [
+				{
+					"hash": "3c6545da81a17d7ac516eef7634598a1d6f16be7",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3c6545da81a17d7ac516eef7634598a1d6f16be7"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3c6545da81a17d7ac516eef7634598a1d6f16be7" }
+					},
+					"type": "commit"
+				},
+				{
+					"hash": "0819fdeeff69d0c642bace6b623e73c42c20a314",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/0819fdeeff69d0c642bace6b623e73c42c20a314"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/0819fdeeff69d0c642bace6b623e73c42c20a314" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in feature/LNTNGP24-244 (pull request #2927)\n\nF: restrict ngp map composition to desired pixel range\n\nApproved-by: Max Albrecht\n",
+					"markup": "markdown",
+					"html": "<p>Merged in feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a> (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2927\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2927</a>)</p>\n<p>F: restrict ngp map composition to desired pixel range</p>\n<p>Approved-by: Max Albrecht</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "0819fdeeff69d0c642bace6b623e73c42c20a314",
+			"date": "2025-04-04T07:27:17+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Simon Harte <simon.harte@quatico.com>",
+				"user": {
+					"display_name": "Simon Harte",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+						"avatar": {
+							"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+						},
+						"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+					},
+					"type": "user",
+					"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+					"account_id": "62974919e000550067e658e0",
+					"nickname": "Simon Harte"
+				}
+			},
+			"message": "f: height restriction only in LG+\n\n#feature/LNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "f: height restriction only in LG+\n\n#feature/LNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>f: height restriction only in LG+</p>\n<p>#feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/0819fdeeff69d0c642bace6b623e73c42c20a314" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/0819fdeeff69d0c642bace6b623e73c42c20a314" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/0819fdeeff69d0c642bace6b623e73c42c20a314" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/0819fdeeff69d0c642bace6b623e73c42c20a314/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/0819fdeeff69d0c642bace6b623e73c42c20a314/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/0819fdeeff69d0c642bace6b623e73c42c20a314/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/0819fdeeff69d0c642bace6b623e73c42c20a314" }
+			},
+			"parents": [
+				{
+					"hash": "3556128d14524e44e15c03857ae935dc3c480798",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3556128d14524e44e15c03857ae935dc3c480798"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3556128d14524e44e15c03857ae935dc3c480798" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "f: height restriction only in LG+\n\n#feature/LNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>f: height restriction only in LG+</p>\n<p>#feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "3556128d14524e44e15c03857ae935dc3c480798",
+			"date": "2025-04-03T15:26:53+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Simon Harte <simon.harte@quatico.com>",
+				"user": {
+					"display_name": "Simon Harte",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+						"avatar": {
+							"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+						},
+						"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+					},
+					"type": "user",
+					"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+					"account_id": "62974919e000550067e658e0",
+					"nickname": "Simon Harte"
+				}
+			},
+			"message": "F: restrict ngp map composition to desired pixel range\n\n#feature/LNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "F: restrict ngp map composition to desired pixel range\n\n#feature/LNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>F: restrict ngp map composition to desired pixel range</p>\n<p>#feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3556128d14524e44e15c03857ae935dc3c480798" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3556128d14524e44e15c03857ae935dc3c480798" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/3556128d14524e44e15c03857ae935dc3c480798" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3556128d14524e44e15c03857ae935dc3c480798/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3556128d14524e44e15c03857ae935dc3c480798/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3556128d14524e44e15c03857ae935dc3c480798/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/3556128d14524e44e15c03857ae935dc3c480798" }
+			},
+			"parents": [
+				{
+					"hash": "3c6545da81a17d7ac516eef7634598a1d6f16be7",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3c6545da81a17d7ac516eef7634598a1d6f16be7"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3c6545da81a17d7ac516eef7634598a1d6f16be7" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "F: restrict ngp map composition to desired pixel range\n\n#feature/LNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>F: restrict ngp map composition to desired pixel range</p>\n<p>#feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "3c6545da81a17d7ac516eef7634598a1d6f16be7",
+			"date": "2025-04-03T13:23:38+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "Merged in LNTNGP24-244-ngp-comp-height (pull request #2922)\n\nLNTNGP24-244 ngp comp height\n\nApproved-by: Simon Harte\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "Merged in LNTNGP24-244-ngp-comp-height (pull request #2922)\n\nLNTNGP24-244 ngp comp height\n\nApproved-by: Simon Harte\n",
+				"markup": "markdown",
+				"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a>-ngp-comp-height (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2922\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2922</a>)</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a> ngp comp height</p>\n<p>Approved-by: Simon Harte</p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3c6545da81a17d7ac516eef7634598a1d6f16be7" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/3c6545da81a17d7ac516eef7634598a1d6f16be7" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/3c6545da81a17d7ac516eef7634598a1d6f16be7" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3c6545da81a17d7ac516eef7634598a1d6f16be7/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3c6545da81a17d7ac516eef7634598a1d6f16be7/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/3c6545da81a17d7ac516eef7634598a1d6f16be7/statuses"
+				}
+			},
+			"parents": [
+				{
+					"hash": "74ff5bca12a230ff904e8bc0dcd826759fb046cd",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/74ff5bca12a230ff904e8bc0dcd826759fb046cd"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/74ff5bca12a230ff904e8bc0dcd826759fb046cd" }
+					},
+					"type": "commit"
+				},
+				{
+					"hash": "25e14771bede782c9edee758b523b5b3e3de1ea6",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/25e14771bede782c9edee758b523b5b3e3de1ea6"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/25e14771bede782c9edee758b523b5b3e3de1ea6" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "Merged in LNTNGP24-244-ngp-comp-height (pull request #2922)\n\nLNTNGP24-244 ngp comp height\n\nApproved-by: Simon Harte\n",
+					"markup": "markdown",
+					"html": "<p>Merged in <a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a>-ngp-comp-height (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/2922\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #2922</a>)</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a> ngp comp height</p>\n<p>Approved-by: Simon Harte</p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "25e14771bede782c9edee758b523b5b3e3de1ea6",
+			"date": "2025-04-03T13:04:20+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "F adjust DangerMap height calcuations for search\n\nLNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "F adjust DangerMap height calcuations for search\n\nLNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>F adjust DangerMap height calcuations for search</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/25e14771bede782c9edee758b523b5b3e3de1ea6" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/25e14771bede782c9edee758b523b5b3e3de1ea6" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/25e14771bede782c9edee758b523b5b3e3de1ea6" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/25e14771bede782c9edee758b523b5b3e3de1ea6/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/25e14771bede782c9edee758b523b5b3e3de1ea6/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/25e14771bede782c9edee758b523b5b3e3de1ea6/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/25e14771bede782c9edee758b523b5b3e3de1ea6" }
+			},
+			"parents": [
+				{
+					"hash": "b463e269bcd2f410407756efb7f692c0de63bb5e",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b463e269bcd2f410407756efb7f692c0de63bb5e"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/b463e269bcd2f410407756efb7f692c0de63bb5e" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "F adjust DangerMap height calcuations for search\n\nLNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>F adjust DangerMap height calcuations for search</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}, {
+			"type": "commit",
+			"hash": "b463e269bcd2f410407756efb7f692c0de63bb5e",
+			"date": "2025-04-03T13:04:20+00:00",
+			"author": {
+				"type": "author",
+				"raw": "Max Albrecht <max.albrecht@quatico.com>",
+				"user": {
+					"display_name": "Max Albrecht",
+					"links": {
+						"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+						"avatar": {
+							"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+						},
+						"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+					},
+					"type": "user",
+					"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+					"account_id": "639308415fc160544e1e49b2",
+					"nickname": "Max Albrecht"
+				}
+			},
+			"message": "r fix linting issues\n\nLNTNGP24-244\n",
+			"summary": {
+				"type": "rendered",
+				"raw": "r fix linting issues\n\nLNTNGP24-244\n",
+				"markup": "markdown",
+				"html": "<p>r fix linting issues</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+			},
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b463e269bcd2f410407756efb7f692c0de63bb5e" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/b463e269bcd2f410407756efb7f692c0de63bb5e" },
+				"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/b463e269bcd2f410407756efb7f692c0de63bb5e" },
+				"approve": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b463e269bcd2f410407756efb7f692c0de63bb5e/approve"
+				},
+				"comments": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b463e269bcd2f410407756efb7f692c0de63bb5e/comments"
+				},
+				"statuses": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/b463e269bcd2f410407756efb7f692c0de63bb5e/statuses"
+				},
+				"patch": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/patch/b463e269bcd2f410407756efb7f692c0de63bb5e" }
+			},
+			"parents": [
+				{
+					"hash": "48eb35d8c61d84c3113c9b2c667d799b609bee36",
+					"links": {
+						"self": {
+							"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/48eb35d8c61d84c3113c9b2c667d799b609bee36"
+						},
+						"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/48eb35d8c61d84c3113c9b2c667d799b609bee36" }
+					},
+					"type": "commit"
+				}
+			],
+			"rendered": {
+				"message": {
+					"type": "rendered",
+					"raw": "r fix linting issues\n\nLNTNGP24-244\n",
+					"markup": "markdown",
+					"html": "<p>r fix linting issues</p>\n<p><a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/LNTNGP24-244\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">LNTNGP24-244</a></p>"
+				}
+			},
+			"repository": {
+				"type": "repository",
+				"full_name": "quatico/mchweb",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+					"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+				},
+				"name": "mchweb",
+				"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+			}
+		}
+	],
+	"pagelen": 30,
+	"next": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commits/release-3.23.0?ctx=f280f2bb98643f491cd4ac03ea7d0a13&page=2"
+}

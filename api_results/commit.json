@@ -1,0 +1,76 @@
+{
+	"type": "commit",
+	"hash": "6592408466715b71f0c65834fbb144bad3f30bee",
+	"date": "2025-06-11T09:46:40+00:00",
+	"author": {
+		"type": "author",
+		"raw": "Simon Harte <simon.harte@quatico.com>",
+		"user": {
+			"display_name": "Simon Harte",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+				"avatar": {
+					"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+				},
+				"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+			},
+			"type": "user",
+			"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+			"account_id": "62974919e000550067e658e0",
+			"nickname": "Simon Harte"
+		}
+	},
+	"message": "Merged in feature/MCHW2C-4190-source (pull request #3143)\n\nF: build intro image caption from legend and source\n\nApproved-by: Egemen Kaba\n",
+	"summary": {
+		"type": "rendered",
+		"raw": "Merged in feature/MCHW2C-4190-source (pull request #3143)\n\nF: build intro image caption from legend and source\n\nApproved-by: Egemen Kaba\n",
+		"markup": "markdown",
+		"html": "<p>Merged in feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4190\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4190</a>-source (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/3143\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #3143</a>)</p>\n<p>F: build intro image caption from legend and source</p>\n<p>Approved-by: Egemen Kaba</p>"
+	},
+	"links": {
+		"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6592408466715b71f0c65834fbb144bad3f30bee" },
+		"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/6592408466715b71f0c65834fbb144bad3f30bee" },
+		"diff": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/6592408466715b71f0c65834fbb144bad3f30bee" },
+		"approve": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6592408466715b71f0c65834fbb144bad3f30bee/approve" },
+		"comments": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6592408466715b71f0c65834fbb144bad3f30bee/comments" },
+		"statuses": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/6592408466715b71f0c65834fbb144bad3f30bee/statuses" }
+	},
+	"parents": [
+		{
+			"hash": "f5ce6fada2b93d16bdae06be0fd3ef47cb186a5b",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/f5ce6fada2b93d16bdae06be0fd3ef47cb186a5b" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/f5ce6fada2b93d16bdae06be0fd3ef47cb186a5b" }
+			},
+			"type": "commit"
+		},
+		{
+			"hash": "cbd360ed98cf11636abd760a555df7aae5dc115b",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/commit/cbd360ed98cf11636abd760a555df7aae5dc115b" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/commits/cbd360ed98cf11636abd760a555df7aae5dc115b" }
+			},
+			"type": "commit"
+		}
+	],
+	"rendered": {
+		"message": {
+			"type": "rendered",
+			"raw": "Merged in feature/MCHW2C-4190-source (pull request #3143)\n\nF: build intro image caption from legend and source\n\nApproved-by: Egemen Kaba\n",
+			"markup": "markdown",
+			"html": "<p>Merged in feature/<a rel=\"nofollow\" href=\"https://quatico.atlassian.net/browse/MCHW2C-4190\" target=\"_blank\" data-module-key=\"dvcs-connector-issue-key-linker\" data-link-key=\"dvcs-connector-issue-key-linker\" data-app-key=\"jira-bitbucket-connector-plugin.a579eb27-2916-4eb9-87fb-12601aca7cfd\" data-principal-uuid=\"{8d5f8588-8113-45a1-8165-39f49e039f44}\" class=\"ap-connect-dialog\">MCHW2C-4190</a>-source (<a href=\"https://bitbucket.org/quatico/mchweb/pull-requests/3143\" rel=\"nofollow\" class=\"ap-connect-link\">pull request #3143</a>)</p>\n<p>F: build intro image caption from legend and source</p>\n<p>Approved-by: Egemen Kaba</p>"
+		}
+	},
+	"repository": {
+		"type": "repository",
+		"full_name": "quatico/mchweb",
+		"links": {
+			"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb" },
+			"html": { "href": "https://bitbucket.org/quatico/mchweb" },
+			"avatar": { "href": "https://bytebucket.org/ravatar/%7B4d41a0c3-7859-49f8-97a9-c2401d579ad0%7D?ts=default" }
+		},
+		"name": "mchweb",
+		"uuid": "{4d41a0c3-7859-49f8-97a9-c2401d579ad0}"
+	},
+	"participants": []
+}
