@@ -233,6 +233,11 @@ Download LM Studio and install the following models:
 - <https://huggingface.co/NathanMad/sentence-transformers_all-MiniLM-L12-v2-gguf>
 - <https://huggingface.co/NathanMad/llama-2-13b-chat-gguf>
 
+?
+- https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF
+
+Start LMStudio Server
+
 ```bash
 cp .env_example_lmstudio .env
 pnpm install
@@ -306,3 +311,20 @@ Playwright is used for E2E testing with a mocked OpenAI API. Tests start the ser
    ```sh
    pnpm test:e2e
    ```
+
+## Bitbucket Docs generation
+
+### Setup
+
+- `npm install -g tsx` - install tsx (with that you can execute the bitbucket cli)
+- env File aufsetzen (src/adapters/.env)
+  - Create *Scoped* API Token with read permissions for Bitbucket in Atlassian: https://id.atlassian.com/manage-profile/security/api-tokens
+  - Configure Token in env file
+  - Configure Quatico E-Mail in env file
+- `nvm use` in Repo root to use NodeJS v23
+
+### Nutzung
+- `tsx --env-file=src/bitbucket-cli/.env src/bitbucket-cli/bitbucket.ts search MCHW2C-4190`
+- `tsx --env-file=src/bitbucket-cli/.env src/bitbucket-cli/bitbucket.ts search MCHW2C-4190,LNTNGP24-420`
+- `tsx --env-file=src/bitbucket-cli/.env src/bitbucket-cli/bitbucket.ts comments 3143`
+- `tsx --env-file=src/bitbucket-cli/.env src/bitbucket-cli/bitbucket.ts build-comment-facts MCHW2C-4190,LNTNGP24-420 ./data/helloworld`

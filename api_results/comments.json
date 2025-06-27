@@ -1,0 +1,353 @@
+{
+	"values": [
+		{
+			"id": 643257045,
+			"created_on": "2025-06-10T15:04:29.245476+00:00",
+			"updated_on": "2025-06-10T17:05:33.586511+00:00",
+			"content": {
+				"type": "rendered",
+				"raw": "Neu `legend` und `source` analog Image. Leider etwas verwirrend vom Naming her aber ich wollte in den page props jetzt nicht zu viel “gerade” ziehen.",
+				"markup": "markdown",
+				"html": "<p>Neu <code>legend</code> und <code>source</code> analog Image. Leider etwas verwirrend vom Naming her aber ich wollte in den page props jetzt nicht zu viel “gerade” ziehen.</p>"
+			},
+			"user": {
+				"display_name": "Simon Harte",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+					"avatar": {
+						"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+					},
+					"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+				},
+				"type": "user",
+				"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+				"account_id": "62974919e000550067e658e0",
+				"nickname": "Simon Harte"
+			},
+			"deleted": false,
+			"inline": { "from": null, "to": 32, "path": "mchweb-components/src/pages/base-page/props/basePageProps.ts" },
+			"pending": false,
+			"type": "pullrequest_comment",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643257045" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643257045" },
+				"code": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf..f5ce6fada2b9?path=mchweb-components%2Fsrc%2Fpages%2Fbase-page%2Fprops%2FbasePageProps.ts"
+				}
+			},
+			"pullrequest": {
+				"type": "pullrequest",
+				"id": 3143,
+				"title": "F: build intro image caption from legend and source",
+				"draft": false,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" }
+				}
+			},
+			"resolution": { }
+		}, {
+			"id": 643301408,
+			"created_on": "2025-06-10T17:08:26.355564+00:00",
+			"updated_on": "2025-06-10T17:08:26.364939+00:00",
+			"content": {
+				"type": "rendered",
+				"raw": "ja cooles Beispiel für zuviel fachlichkeit in generischer Komponente. ist das nicht einfach eine caption? und fachlich kommt da source und/oder legend rein.",
+				"markup": "markdown",
+				"html": "<p>ja cooles Beispiel für zuviel fachlichkeit in generischer Komponente. ist das nicht einfach eine caption? und fachlich kommt da source und/oder legend rein.</p>"
+			},
+			"user": {
+				"display_name": "Max Albrecht",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D" },
+					"avatar": {
+						"href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/639308415fc160544e1e49b2/90b7571f-1d06-4f04-bf75-9ae43e895fd7/128"
+					},
+					"html": { "href": "https://bitbucket.org/%7Bdbfedc01-9c35-49af-b41b-a8fb437e97c8%7D/" }
+				},
+				"type": "user",
+				"uuid": "{dbfedc01-9c35-49af-b41b-a8fb437e97c8}",
+				"account_id": "639308415fc160544e1e49b2",
+				"nickname": "Max Albrecht"
+			},
+			"deleted": false,
+			"parent": {
+				"id": 643257045,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643257045" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643257045" }
+				}
+			},
+			"inline": { "from": null, "to": 32, "path": "mchweb-components/src/pages/base-page/props/basePageProps.ts" },
+			"pending": false,
+			"type": "pullrequest_comment",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643301408" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643301408" },
+				"code": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf..f5ce6fada2b9?path=mchweb-components%2Fsrc%2Fpages%2Fbase-page%2Fprops%2FbasePageProps.ts"
+				}
+			},
+			"pullrequest": {
+				"type": "pullrequest",
+				"id": 3143,
+				"title": "F: build intro image caption from legend and source",
+				"draft": false,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" }
+				}
+			}
+		}, {
+			"id": 643509105,
+			"created_on": "2025-06-11T06:58:16.502134+00:00",
+			"updated_on": "2025-06-11T06:58:16.510162+00:00",
+			"content": {
+				"type": "rendered",
+				"raw": "@{639308415fc160544e1e49b2} ja genau, aber eben wollte nicht durchgehen und überall source auf caption umstellen, vor allem weil ich meinte genau `caption` teils doch noch anders verwendet wird.",
+				"markup": "markdown",
+				"html": "<p><span class=\"ap-mention\" data-atlassian-id=\"639308415fc160544e1e49b2\">@Max Albrecht</span> ja genau, aber eben wollte nicht durchgehen und überall source auf caption umstellen, vor allem weil ich meinte genau <code>caption</code> teils doch noch anders verwendet wird.</p>"
+			},
+			"user": {
+				"display_name": "Simon Harte",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+					"avatar": {
+						"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+					},
+					"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+				},
+				"type": "user",
+				"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+				"account_id": "62974919e000550067e658e0",
+				"nickname": "Simon Harte"
+			},
+			"deleted": false,
+			"parent": {
+				"id": 643301408,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643301408" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643301408" }
+				}
+			},
+			"inline": { "from": null, "to": 32, "path": "mchweb-components/src/pages/base-page/props/basePageProps.ts" },
+			"pending": false,
+			"type": "pullrequest_comment",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643509105" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643509105" },
+				"code": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf..f5ce6fada2b9?path=mchweb-components%2Fsrc%2Fpages%2Fbase-page%2Fprops%2FbasePageProps.ts"
+				}
+			},
+			"pullrequest": {
+				"type": "pullrequest",
+				"id": 3143,
+				"title": "F: build intro image caption from legend and source",
+				"draft": false,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" }
+				}
+			}
+		}, {
+			"id": 643569134,
+			"created_on": "2025-06-11T09:02:05.941207+00:00",
+			"updated_on": "2025-06-11T09:02:05.947138+00:00",
+			"content": {
+				"type": "rendered",
+				"raw": "Ja, jein, das props script bei den Bildern macht schon was sehr ähnliches mit mehr code: [https://bitbucket.org/quatico/mchweb/src/develop/mchweb-components/src/components/content/image/props/caption.ts](https://bitbucket.org/quatico/mchweb/src/develop/mchweb-components/src/components/content/image/props/caption.ts){: data-inline-card='' } ",
+				"markup": "markdown",
+				"html": "<p>Ja, jein, das props script bei den Bildern macht schon was sehr ähnliches mit mehr code: <a data-inline-card=\"\" data-is-external-link=\"true\" href=\"https://bitbucket.org/quatico/mchweb/src/develop/mchweb-components/src/components/content/image/props/caption.ts\" rel=\"nofollow\">https://bitbucket.org/quatico/mchweb/src/develop/mchweb-components/src/components/content/image/props/caption.ts</a> </p>"
+			},
+			"user": {
+				"display_name": "Egemen Kaba",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D" },
+					"avatar": { "href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/initials/EK-2.png" },
+					"html": { "href": "https://bitbucket.org/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D/" }
+				},
+				"type": "user",
+				"uuid": "{92cd286d-9a10-428d-9ebf-ef3ea9399954}",
+				"account_id": "712020:51d84fd2-7daa-4e54-bc66-395b56d759b0",
+				"nickname": "Egemen Kaba"
+			},
+			"deleted": false,
+			"parent": {
+				"id": 643509105,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643509105" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643509105" }
+				}
+			},
+			"inline": { "from": null, "to": 32, "path": "mchweb-components/src/pages/base-page/props/basePageProps.ts" },
+			"pending": false,
+			"type": "pullrequest_comment",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643569134" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643569134" },
+				"code": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf..f5ce6fada2b9?path=mchweb-components%2Fsrc%2Fpages%2Fbase-page%2Fprops%2FbasePageProps.ts"
+				}
+			},
+			"pullrequest": {
+				"type": "pullrequest",
+				"id": 3143,
+				"title": "F: build intro image caption from legend and source",
+				"draft": false,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" }
+				}
+			}
+		}, {
+			"id": 643583943,
+			"created_on": "2025-06-11T09:33:09.597047+00:00",
+			"updated_on": "2025-06-11T09:33:09.603532+00:00",
+			"content": {
+				"type": "rendered",
+				"raw": "@{62974919e000550067e658e0} @{639308415fc160544e1e49b2} Hab hier noch die Felder etwas neu gelayoutet damit es einfacher zu bedienen ist - ausserdem hat das renaming in base-page.yaml im layout gefehlt",
+				"markup": "markdown",
+				"html": "<p><span class=\"ap-mention\" data-atlassian-id=\"62974919e000550067e658e0\">@Simon Harte</span> <span class=\"ap-mention\" data-atlassian-id=\"639308415fc160544e1e49b2\">@Max Albrecht</span> Hab hier noch die Felder etwas neu gelayoutet damit es einfacher zu bedienen ist - ausserdem hat das renaming in base-page.yaml im layout gefehlt</p>"
+			},
+			"user": {
+				"display_name": "Egemen Kaba",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D" },
+					"avatar": { "href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/initials/EK-2.png" },
+					"html": { "href": "https://bitbucket.org/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D/" }
+				},
+				"type": "user",
+				"uuid": "{92cd286d-9a10-428d-9ebf-ef3ea9399954}",
+				"account_id": "712020:51d84fd2-7daa-4e54-bc66-395b56d759b0",
+				"nickname": "Egemen Kaba"
+			},
+			"deleted": false,
+			"inline": {
+				"from": null,
+				"to": 49,
+				"path": "mchweb-magnolia/mchweb-magnolia-module/src/main/resources/mchweb/dialogs/pages/blog-article-page.yaml"
+			},
+			"pending": false,
+			"type": "pullrequest_comment",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643583943" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643583943" },
+				"code": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf..f5ce6fada2b9?path=mchweb-magnolia%2Fmchweb-magnolia-module%2Fsrc%2Fmain%2Fresources%2Fmchweb%2Fdialogs%2Fpages%2Fblog-article-page.yaml"
+				}
+			},
+			"pullrequest": {
+				"type": "pullrequest",
+				"id": 3143,
+				"title": "F: build intro image caption from legend and source",
+				"draft": false,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" }
+				}
+			}
+		}, {
+			"id": 643585305,
+			"created_on": "2025-06-11T09:36:05.180915+00:00",
+			"updated_on": "2025-06-11T09:36:05.187645+00:00",
+			"content": {
+				"type": "rendered",
+				"raw": "@{712020:51d84fd2-7daa-4e54-bc66-395b56d759b0} An dem hatte ich mich orientiert, halt eben nicht als caption hier sondern leider als “source”, um Refactoring zu sparen.",
+				"markup": "markdown",
+				"html": "<p><span class=\"ap-mention\" data-atlassian-id=\"712020:51d84fd2-7daa-4e54-bc66-395b56d759b0\">@Egemen Kaba</span> An dem hatte ich mich orientiert, halt eben nicht als caption hier sondern leider als “source”, um Refactoring zu sparen.</p>"
+			},
+			"user": {
+				"display_name": "Simon Harte",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D" },
+					"avatar": {
+						"href": "https://secure.gravatar.com/avatar/91817fa6650a4279430532a1a49e2c40?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FSH-1.png"
+					},
+					"html": { "href": "https://bitbucket.org/%7B8284bd94-a6fe-4ca4-9611-ae68db9ed630%7D/" }
+				},
+				"type": "user",
+				"uuid": "{8284bd94-a6fe-4ca4-9611-ae68db9ed630}",
+				"account_id": "62974919e000550067e658e0",
+				"nickname": "Simon Harte"
+			},
+			"deleted": false,
+			"parent": {
+				"id": 643569134,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643569134" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643569134" }
+				}
+			},
+			"inline": { "from": null, "to": 32, "path": "mchweb-components/src/pages/base-page/props/basePageProps.ts" },
+			"pending": false,
+			"type": "pullrequest_comment",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643585305" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643585305" },
+				"code": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf..f5ce6fada2b9?path=mchweb-components%2Fsrc%2Fpages%2Fbase-page%2Fprops%2FbasePageProps.ts"
+				}
+			},
+			"pullrequest": {
+				"type": "pullrequest",
+				"id": 3143,
+				"title": "F: build intro image caption from legend and source",
+				"draft": false,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" }
+				}
+			}
+		}, {
+			"id": 645439257,
+			"created_on": "2025-06-16T13:43:44.173125+00:00",
+			"updated_on": "2025-06-16T13:43:44.179631+00:00",
+			"content": { "type": "rendered", "raw": "test", "markup": "markdown", "html": "<p>test</p>" },
+			"user": {
+				"display_name": "Egemen Kaba",
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/users/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D" },
+					"avatar": { "href": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/initials/EK-2.png" },
+					"html": { "href": "https://bitbucket.org/%7B92cd286d-9a10-428d-9ebf-ef3ea9399954%7D/" }
+				},
+				"type": "user",
+				"uuid": "{92cd286d-9a10-428d-9ebf-ef3ea9399954}",
+				"account_id": "712020:51d84fd2-7daa-4e54-bc66-395b56d759b0",
+				"nickname": "Egemen Kaba"
+			},
+			"deleted": false,
+			"parent": {
+				"id": 643583943,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/643583943" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-643583943" }
+				}
+			},
+			"inline": {
+				"from": null,
+				"to": 49,
+				"path": "mchweb-magnolia/mchweb-magnolia-module/src/main/resources/mchweb/dialogs/pages/blog-article-page.yaml"
+			},
+			"pending": false,
+			"type": "pullrequest_comment",
+			"links": {
+				"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143/comments/645439257" },
+				"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143/_/diff#comment-645439257" },
+				"code": {
+					"href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/diff/quatico/mchweb:cbd360ed98cf..f5ce6fada2b9?path=mchweb-magnolia%2Fmchweb-magnolia-module%2Fsrc%2Fmain%2Fresources%2Fmchweb%2Fdialogs%2Fpages%2Fblog-article-page.yaml"
+				}
+			},
+			"pullrequest": {
+				"type": "pullrequest",
+				"id": 3143,
+				"title": "F: build intro image caption from legend and source",
+				"draft": false,
+				"links": {
+					"self": { "href": "https://api.bitbucket.org/2.0/repositories/quatico/mchweb/pullrequests/3143" },
+					"html": { "href": "https://bitbucket.org/quatico/mchweb/pull-requests/3143" }
+				}
+			}
+		}
+	], "pagelen": 10, "size": 7, "page": 1
+}

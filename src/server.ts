@@ -15,9 +15,9 @@ import {
   loadUserTemplate,
   fillUserTemplate,
 } from './dataset/template-loader';
-import { readFile } from 'node:fs/promises';
+import { readdir, readFile } from 'node:fs/promises';
 import { readdirSync } from 'node:fs';
-import path from 'node:path';
+import path, { extname } from 'node:path';
 import * as process from 'node:process';
 import { getAIConfig } from './ai/provider-config';
 
@@ -234,17 +234,10 @@ app.post('/ask', async (c) => {
         <summary>System Prompt</summary>
         <pre style="white-space: pre-wrap;">${escapeHtml(system)}</pre>
       </details>
-      <details>
-        <summary>Documents</summary>
-        <pre style="white-space: pre-wrap;">${escapeHtml(
-          stripFrontmatter(
-            await readFile(
-              `${process.cwd()}/data/${dataParam}/docs.md`,
-              'utf-8'
-            )
-          )
-        )}</pre>
-      </details>
+<!--      <details>-->
+<!--        <summary>Documents</summary>-->
+<!--        <pre style="white-space: pre-wrap;">to be implemented</pre>-->
+<!--      </details>-->
     </section>
   `;
   return c.html(htmlBody(html));
